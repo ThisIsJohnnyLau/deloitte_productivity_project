@@ -19,6 +19,7 @@ https://www.oecd.org/sdd/productivity-stats/40526851.pdf
 
 ## Initial assessment
 • Amount of data cleaning could be reduced by targeting attention to key areas of interest
+• Keep in mind the accuracy of the data
 • 
 
 ## Questions to answer
