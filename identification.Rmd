@@ -7,3 +7,61 @@ Low productivity industries
 
 # Identify and target industries with low productivity levels
 
+```{r}
+europe_prod %>% 
+    group_by(industry) %>% 
+    arrange(industry, desc(output_per_hour)) %>% 
+        mutate(rank = row_number()) %>%
+    filter(country == "United Kingdom") %>% 
+    arrange(desc(rank))
+```
+
+## Proessional, scientific and technical
+
+```{r}
+europe_prod %>% 
+    filter(industry == "Professional, scientific and technical activities; administrative and support service activities") %>% 
+    ggplot() +
+    aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
+    geom_col(colour = "white") +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+          legend.position = "none")
+```
+
+
+## Financial and insurance activities
+
+```{r}
+
+europe_prod %>% 
+    filter(industry == "Financial and insurance activities") %>% 
+    ggplot() +
+    aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
+    geom_col(colour = "white") +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+          legend.position = "none")
+```
+
+## Public administration, defence, education, human health and social work activities
+```{r}
+europe_prod %>% 
+    filter(industry == "Financial and insurance activities") %>% 
+    ggplot() +
+    aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
+    geom_col(colour = "white") +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+          legend.position = "none")
+```
+
+
+## Information and communication	
+```{r}
+europe_prod %>% 
+    filter(industry == "Information and communication") %>% 
+    ggplot() +
+    aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
+    geom_col(colour = "white") +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+          legend.position = "none")
+```
+
