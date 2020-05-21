@@ -30,14 +30,7 @@ G7_prod_hist %>%
 
 
 # UK lags behind some other developed economies
-```{r}
-europe_prod %>% 
-    group_by(industry) %>% 
-    arrange(industry, desc(output_per_hour)) %>% 
-        mutate(rank = row_number()) %>%
-    filter(country == "United Kingdom") %>% 
-    arrange(desc(rank))
-```
+
 
 # local business development and the wider economy are affected by productivity
 

@@ -1811,18 +1811,6 @@ G7_prod_hist %&gt;%
 </div>
 <div id="uk-lags-behind-some-other-developed-economies" class="section level1">
 <h1>UK lags behind some other developed economies</h1>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXVyb3BlX3Byb2QgJT4lIFxuICAgIGdyb3VwX2J5KGluZHVzdHJ5KSAlPiUgXG4gICAgYXJyYW5nZShpbmR1c3RyeSwgZGVzYyhvdXRwdXRfcGVyX2hvdXIpKSAlPiUgXG4gICAgICAgIG11dGF0ZShyYW5rID0gcm93X251bWJlcigpKSAlPiVcbiAgICBmaWx0ZXIoY291bnRyeSA9PSBcIlVuaXRlZCBLaW5nZG9tXCIpICU+JSBcbiAgICBhcnJhbmdlKGRlc2MocmFuaykpXG5gYGAifQ== -->
-<pre class="r"><code>europe_prod %&gt;% 
-    group_by(industry) %&gt;% 
-    arrange(industry, desc(output_per_hour)) %&gt;% 
-        mutate(rank = row_number()) %&gt;%
-    filter(country == &quot;United Kingdom&quot;) %&gt;% 
-    arrange(desc(rank))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 <div id="local-business-development-and-the-wider-economy-are-affected-by-productivity" class="section level1">
 <h1>local business development and the wider economy are affected by productivity</h1>
@@ -1831,7 +1819,7 @@ G7_prod_hist %&gt;%
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyDigJxQcm9kdWN0aXZpdHkgaXMgY29tbW9ubHkgZGVmaW5lZCBhcyBhIHJhdGlvIGJldHdlZW4gdGhlIG91dHB1dCB2b2x1bWUgYW5kIHRoZSB2b2x1bWUgb2YgaW5wdXRzLgoKIyBNZWFzdXJlcyBob3cgZWZmaWNpZW50bHkgcHJvZHVjdGlvbiBpbnB1dHMgYXJlIGJlaW5nIHVzZWQgaW4gYW4gZWNvbm9teSB0byBwcm9kdWNlIGEgZ2l2ZW4gbGV2ZWwgb2Ygb3V0cHV0LgoKIyBMYWJvdXIgYW5kIGNhcGl0YWwgaW5wdXRzCgojIE92ZXIgdGhlIHBhc3QgZGVjYWRlLCBwcm9kdWN0aXZpdHkgaGFzIHNsb3dlZCBkb3duIGdsb2JhbGx5CgoKCkNvbnN0YW50IHByaWNlIEdEUCBwZXIgaG91ciB3b3JrZWQgLSBHNwpgYGB7cn0KCkc3X3Byb2RfaGlzdCAlPiUKICAgIGdncGxvdCgpICsKICAgIGFlcyh4ID0geWVhciwgeSA9IEdEUF9wZXJfaG91cl93b3JrZWQsIGNvbG91ciA9IGNvdW50cnkpICsKICAgIGdlb21fbGluZSgpICsKICAgIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJib3R0b20iKSAKCiMgKwojICAgICBzY2FsZV9jb2xvcl9tYW51YWwodmFsdWVzPWMoVUsgPSAiIzk5OTk5OSIpKQoKCmBgYAoKCiMgVUsgbGFncyBiZWhpbmQgc29tZSBvdGhlciBkZXZlbG9wZWQgZWNvbm9taWVzCmBgYHtyfQpldXJvcGVfcHJvZCAlPiUgCiAgICBncm91cF9ieShpbmR1c3RyeSkgJT4lIAogICAgYXJyYW5nZShpbmR1c3RyeSwgZGVzYyhvdXRwdXRfcGVyX2hvdXIpKSAlPiUgCiAgICAgICAgbXV0YXRlKHJhbmsgPSByb3dfbnVtYmVyKCkpICU+JQogICAgZmlsdGVyKGNvdW50cnkgPT0gIlVuaXRlZCBLaW5nZG9tIikgJT4lIAogICAgYXJyYW5nZShkZXNjKHJhbmspKQpgYGAKCiMgbG9jYWwgYnVzaW5lc3MgZGV2ZWxvcG1lbnQgYW5kIHRoZSB3aWRlciBlY29ub215IGFyZSBhZmZlY3RlZCBieSBwcm9kdWN0aXZpdHkKCmBgYHtyfQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyDigJxQcm9kdWN0aXZpdHkgaXMgY29tbW9ubHkgZGVmaW5lZCBhcyBhIHJhdGlvIGJldHdlZW4gdGhlIG91dHB1dCB2b2x1bWUgYW5kIHRoZSB2b2x1bWUgb2YgaW5wdXRzLgoKIyBNZWFzdXJlcyBob3cgZWZmaWNpZW50bHkgcHJvZHVjdGlvbiBpbnB1dHMgYXJlIGJlaW5nIHVzZWQgaW4gYW4gZWNvbm9teSB0byBwcm9kdWNlIGEgZ2l2ZW4gbGV2ZWwgb2Ygb3V0cHV0LgoKIyBMYWJvdXIgYW5kIGNhcGl0YWwgaW5wdXRzCgojIE92ZXIgdGhlIHBhc3QgZGVjYWRlLCBwcm9kdWN0aXZpdHkgaGFzIHNsb3dlZCBkb3duIGdsb2JhbGx5CgoKCkNvbnN0YW50IHByaWNlIEdEUCBwZXIgaG91ciB3b3JrZWQgLSBHNwpgYGB7cn0KCkc3X3Byb2RfaGlzdCAlPiUKICAgIGdncGxvdCgpICsKICAgIGFlcyh4ID0geWVhciwgeSA9IEdEUF9wZXJfaG91cl93b3JrZWQsIGNvbG91ciA9IGNvdW50cnkpICsKICAgIGdlb21fbGluZSgpICsKICAgIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJib3R0b20iKSAKCiMgKwojICAgICBzY2FsZV9jb2xvcl9tYW51YWwodmFsdWVzPWMoVUsgPSAiIzk5OTk5OSIpKQoKCmBgYAoKCiMgVUsgbGFncyBiZWhpbmQgc29tZSBvdGhlciBkZXZlbG9wZWQgZWNvbm9taWVzCgoKIyBsb2NhbCBidXNpbmVzcyBkZXZlbG9wbWVudCBhbmQgdGhlIHdpZGVyIGVjb25vbXkgYXJlIGFmZmVjdGVkIGJ5IHByb2R1Y3Rpdml0eQoKYGBge3J9CmBgYAo=</div>
 
 
 
