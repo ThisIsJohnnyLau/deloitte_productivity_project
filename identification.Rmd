@@ -1,0 +1,9 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Low productivity industries
+
+# Identify and target industries with low productivity levels
+
