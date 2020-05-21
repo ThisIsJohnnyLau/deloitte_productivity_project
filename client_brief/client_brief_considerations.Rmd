@@ -29,54 +29,31 @@ https://www.oecd.org/sdd/productivity-stats/40526851.pdf
 • Has the client oversimplified the problem in any way - e.g. part-employment, zero-hour contracts etc.
 • What has been the effect of changing sector dominance in UK
 • How about Scotland specifically
-• What are the effects of inflation, technological progress and economic crises.
+• What are the effects of inflation, technological progress and economic crises
+• Uncertainty and crises / Brexit
+• Balance sheets, pensions, costs
+• Regulation
+• Investment in people, staff, technology and new methods
+• Communication - broadband, Corona
+• Incentivisation
+• Corona
+• Rents and key workers
+• Benefits system
+• UK economic balance versus others
+
+
+
 
 # Initial thoughts
 • Careful planning might save some time
 • Explanatory versus predictive models
 • Is low productivity a natural course of events for developed countries?
+# Focus on MVP
+Compartmentalise
 
 
-
-
-# The productivity problem
-
-
-## local business development and the wider economy are affected by productivity
-
-
-
-
-## Over the past decade, productivity has slowed down globally
-
-
-## UK lags behind some other developed economies
-
-
-
-## “Productivity is commonly defined as a ratio between the output volume and the volume of inputs.
-
-## Measures how efficiently production inputs are being used in an economy to produce a given level of output.
-
-## Labour and capital inputs
-
-## Identify and target industries with low productivity levels
-
-
-## Example of initiatives within other nations to increase local productivity
-
-# Main business question is generally: How can we improve productivity within Scotland and the UK overall?
- 
-
-## What factors can be improved to increase employee and/or business productivity across UK regions?
-
-
-
-## Which industries are lagging behind in terms of productivity and how could they catch up?
-
-
-
-## Can we predict overall UK productivity rates?
+RMD plus presentation
+Key messages
 
 
 

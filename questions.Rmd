@@ -1,0 +1,94 @@
+---
+title: "The productivity problem"
+output: html_notebook
+---
+
+
+# UK lags behind some other developed economies
+```{r}
+europe_prod %>% 
+    group_by(industry) %>% 
+    arrange(industry, desc(output_per_hour)) %>% 
+        mutate(rank = row_number()) %>%
+    filter(country == "United Kingdom") %>% 
+    arrange(desc(rank))
+```
+
+
+
+# local business development and the wider economy are affected by productivity
+
+```{r}
+
+plot <- ggplot() + 
+  geom_line(data=MS, aes(x=date, y=MSCI.World.PI, color='MS')) +
+  geom_line(data=S, aes(x=date, y=SandP.TR, color='S')) +
+  geom_line(data=BR, aes(x=date, y=MSCI.BRIC.PI, color='BR')) +
+  geom_line(data=HF, aes(x=date, y=HFRX, color='HF')) +
+  geom_line(data=LP, aes(x=date, y=LPX50.TR, color='LP')) +
+  scale_color_manual(
+      values = c(
+           MS="red",
+           S="blue",
+          BR="green",
+          HF="yellow",
+          LP="violet" )) +
+  labs(color="Indices") +
+  xlab('Time') +
+  ylab('Price')
+plot
+
+```
+
+
+
+
+# Over the past decade, productivity has slowed down globally
+
+Constant price GDP per hour worked - G7
+```{r}
+
+G7_prod_hist %>%
+    ggplot() +
+    aes(x = year, y = GDP_per_hour_worked, colour = country) +
+    geom_line() +
+    theme(legend.position = "bottom") 
+
+# +
+#     scale_color_manual(values=c(UK = "#999999"))
+
+
+```
+
+
+
+
+
+
+
+# “Productivity is commonly defined as a ratio between the output volume and the volume of inputs.
+
+# Measures how efficiently production inputs are being used in an economy to produce a given level of output.
+
+# Labour and capital inputs
+
+# Identify and target industries with low productivity levels
+
+
+# Example of initiatives within other nations to increase local productivity
+
+# Main business question is generally: How can we improve productivity within Scotland and the UK overall?
+ 
+
+# What factors can be improved to increase employee and/or business productivity across UK regions?
+
+
+
+# Which industries are lagging behind in terms of productivity and how could they catch up?
+
+
+
+# Can we predict overall UK productivity rates?
+
+
+

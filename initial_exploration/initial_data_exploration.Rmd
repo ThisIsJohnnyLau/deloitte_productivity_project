@@ -11,18 +11,40 @@ library(tidyverse)
 
 ```
 
+
+
+```{r}
+europe_prod %>%
+    distinct(country) %>% 
+    nrow()
+```
+# UK lags behind some other developed economies
+
 ```{r}
 europe_prod %>% 
     filter(industry == "Construction") %>% 
-    arrange(desc(output_per_hour)) %>% 
     ggplot() +
     aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
     geom_col(colour = "white") +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.3), legend.position = "none")
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+          legend.position = "none")
 ```
 
 ```{r}
 europe_prod %>% 
-    
+    group_by(industry) %>% 
+    arrange(industry, desc(output_per_hour)) %>% 
+        mutate(rank = row_number()) %>%
+    filter(country == "United Kingdom") %>% 
+    arrange(desc(rank))
+
+
+```
+
+```{r}
+europe_prod %>% 
+    group_by(industry) %>% 
+    arrange(industry, desc(output_per_hour)) %>% 
+        mutate(rank = row_number())
 ```
 
