@@ -40,13 +40,19 @@ UK_regional_output_per_hour %>%
 
 ```{r}
 UK_regional_output_per_hour %>% 
-    filter(year == max(year)) %>%
-    arrange(output_per_hour)
+    filter(year == max(year),
+           industry != "all_industries") %>%
+    group_by(region, industry) %>% 
+    summarise(industry_output_per_hour = sum(output_per_hour)) %>% 
+    arrange(industry_output_per_hour)
 ```
 
 ```{r}
 UK_regional_output_per_job %>% 
-    filter(year == max(year)) %>%
-    arrange(output_per_job)
+    filter(year == max(year),
+           industry != "all_industries") %>%
+    group_by(region, industry) %>% 
+    summarise(industry_output_per_job = sum(output_per_job)) %>% 
+    arrange(industry_output_per_job)
 ```
 
