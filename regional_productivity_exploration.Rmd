@@ -38,3 +38,15 @@ UK_regional_output_per_hour %>%
            subsector_letter == "all_industries")
 ```
 
+```{r}
+UK_regional_output_per_hour %>% 
+    filter(year == max(year)) %>%
+    arrange(output_per_hour)
+```
+
+```{r}
+UK_regional_output_per_job %>% 
+    filter(year == max(year)) %>%
+    arrange(output_per_job)
+```
+
