@@ -17,24 +17,6 @@ other_services <- c("s", "t", "s_and_t")
 
 
 
-
-
-
-# rownames(UK_Labour_Productivity_Jobs_in_Regions_by_Industry)[rownames(UK_Labour_Productivity_Jobs_in_Regions_by_Industry) == "SIC 2007 section"] <- "industry_letter"
-
-
-
-# industry_codes <- read_excel("raw_data/data/UK_productivity/UK Labour Productivity - Jobs in Regions by Industry.xls", 
-#                              sheet = "15. United Kingdom", skip = 4, 
-#                              n_max = 1) %>% 
-#     clean_names() %>% 
-#     select(-1:-2)
-# 
-# 
-# industry_names <- c("code")
-# industry_code_lookup <- cbind(industry_names, industry_codes)
-
-
 #UK Jobs
 
 UK_Labour_Productivity_Jobs_in_Regions_by_Industry <- read_excel("raw_data/data/UK_productivity/UK Labour Productivity - Jobs in Regions by Industry.xls", 

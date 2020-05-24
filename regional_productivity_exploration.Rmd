@@ -1,0 +1,40 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Workforce jobs by region and industry (seasonally adjusted) excel file using Standard Industrial Classigication (SIC) standards
+
+• Jobs
+• Hours
+
+
+
+
+```{r}
+UK_Labour_Productivity_Jobs_in_Regions_by_Industry %>%
+    filter(year_month == max(year_month)) %>%
+    group_by(industry) %>% 
+    summarise(total_jobs = sum(jobs)) %>% 
+    arrange(desc(total_jobs))
+
+```
+
+```{r}
+scotland_jobs %>%
+    filter(year_month == max(year_month)) %>%
+    group_by(industry) %>% 
+    summarise(total_jobs = sum(jobs)) %>% 
+    arrange(desc(total_jobs))
+```
+
+
+
+
+
+```{r}
+UK_regional_output_per_hour %>% 
+    filter(year == max(year),
+           subsector_letter == "all_industries")
+```
+
