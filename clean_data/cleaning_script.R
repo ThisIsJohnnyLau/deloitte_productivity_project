@@ -1,4 +1,7 @@
-europe_prod <- europe_prod %>% 
+europe_prod <-
+    read_xls("raw_data/data/country_comparisons/International Labour Productivity - Europe.xls",
+             sheet = "Table 1",
+             skip = 3) %>% 
     select(-"A*10 (excl L)") %>% 
     head(9) %>%
     pivot_longer(Belgium : Switzerland, names_to = "country") %>% 
@@ -8,7 +11,7 @@ europe_prod <- europe_prod %>%
 
 
 G7_prod_hist <-
-    read_excel("data/International Labour Productivity - G7.xls",
+    read_excel("raw_data/data/country_comparisons/International Labour Productivity - G7.xls",
                 sheet = "Table 3", skip = 4, n_max = 24) %>%
                 drop_na() %>% 
     pivot_longer(cols = Canada : `G7 exc. UK`,

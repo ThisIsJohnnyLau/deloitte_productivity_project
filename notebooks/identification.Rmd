@@ -24,7 +24,7 @@ europe_prod %>%
     ggplot() +
     aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
     geom_col(colour = "white") +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.32),
           legend.position = "none")
 ```
 
@@ -38,18 +38,18 @@ europe_prod %>%
     ggplot() +
     aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
     geom_col(colour = "white") +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.32),
           legend.position = "none")
 ```
 
 ## Public administration, defence, education, human health and social work activities
 ```{r}
 europe_prod %>% 
-    filter(industry == "Financial and insurance activities") %>% 
+    filter(industry == "Public administration, defence, education, human health and social work activities") %>% 
     ggplot() +
     aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
     geom_col(colour = "white") +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.32),
           legend.position = "none")
 ```
 
@@ -61,7 +61,13 @@ europe_prod %>%
     ggplot() +
     aes(x = reorder(country, -output_per_hour), y = output_per_hour, fill = country == "United Kingdom") +
     geom_col(colour = "white") +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.3),
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.32),
           legend.position = "none")
+```
+
+What is the impact of these laggards?
+
+```{r}
+
 ```
 
