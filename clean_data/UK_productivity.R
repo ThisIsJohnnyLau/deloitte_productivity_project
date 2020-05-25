@@ -445,8 +445,6 @@ UK_regional_hours <-
 
 
 #Grand Table
-
-UK_regional_productivity_data <-
     rbind(UK_regional_hours,
           UK_regional_jobs,
           UK_regional_output_per_hour,
@@ -467,8 +465,6 @@ UK_regional_productivity_data <-
                                  TRUE ~ subsector_letter)
            ) %>%
     relocate(industry, .before = subsector_letter) %>% 
-    rename(year = ...1)
-
-
-write_csv(UK_regional_productivity_data, "clean_data/UK_regional_productivity")
+    rename(year = ...1) %>% 
+    write_csv(., "clean_data/UK_regional_productivity")
 
