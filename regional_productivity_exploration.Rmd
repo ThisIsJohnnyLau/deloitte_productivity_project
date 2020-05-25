@@ -56,3 +56,13 @@ UK_regional_output_per_job %>%
     arrange(industry_output_per_job)
 ```
 
+```{r}
+UK_regional_output_per_job %>%
+    filter(industry == "financial_services") %>%
+    group_by(year, region, industry) %>%
+    summarise(output_per_job = sum(output_per_job)) %>% 
+    ggplot() +
+    aes(x = year, y = output_per_job, colour = region) %>% 
+    geom_line()
+```
+
