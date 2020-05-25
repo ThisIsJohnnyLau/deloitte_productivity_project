@@ -21,11 +21,13 @@ UK_output_per_job <- read_xls("raw_data/data/UK_productivity/UK Labour Productiv
 
 ...1 <- UK_output_per_job[1]
 
-scotland_output_per_job <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls", sheet = "OpJ (value)", range = "GG7:GW27") %>%
+scotland_output_per_job <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls",
+                            sheet = "OpJ (value)", range = "GG7:GW27") %>%
     cbind(., ...1) %>% 
     mutate(region = "Scotland") 
 
-london_output_per_job <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls", sheet = "OpJ (value)", range = "DQ7:EG27") %>%
+london_output_per_job <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls",
+                                  sheet = "OpJ (value)", range = "DQ7:EG27") %>%
     cbind(., ...1) %>% 
     mutate(region = "London")
 
@@ -466,3 +468,7 @@ UK_regional_productivity_data <-
            ) %>%
     relocate(industry, .before = subsector_letter) %>% 
     rename(year = ...1)
+
+
+write_csv(UK_regional_productivity_data, "clean_data/UK_regional_productivity")
+

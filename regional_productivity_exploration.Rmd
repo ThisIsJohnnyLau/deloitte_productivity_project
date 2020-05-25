@@ -66,3 +66,11 @@ UK_regional_output_per_job %>%
     geom_line()
 ```
 
+```{r}
+scotland_output_per_job
+```
+
+```{r}
+UK_regional_productivity_data <- read_csv("clean_data/UK_regional_productivity")
+```
+
