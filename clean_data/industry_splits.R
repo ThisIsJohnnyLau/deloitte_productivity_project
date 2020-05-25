@@ -12,9 +12,3 @@ prof_and_biz_services <- c("m", "n")
 public_admin_and_def <- "o"
 financial_services <- c("k", "l")
 other_services <- c("s", "t", "s_and_t")
-
-
-
-
-
-

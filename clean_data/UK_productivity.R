@@ -9,26 +9,6 @@ library(TableToLongForm)
 
 
 
-europe_prod <-
-    read_xls("raw_data/data/country_comparisons/International Labour Productivity - Europe.xls",
-             sheet = "Table 1",
-             skip = 3) %>% 
-    select(-"A*10 (excl L)") %>% 
-    head(9) %>%
-    pivot_longer(Belgium : Switzerland, names_to = "country") %>% 
-    rename("Industry" = "NACE Industry",
-           "output_per_hour" = "value") %>% 
-    clean_names()
-
-
-G7_prod_hist <-
-    read_excel("raw_data/data/country_comparisons/International Labour Productivity - G7.xls",
-                sheet = "Table 3", skip = 4, n_max = 24) %>%
-                drop_na() %>% 
-    pivot_longer(cols = Canada : `G7 exc. UK`,
-                 names_to = "country",
-                 values_to = "GDP_per_hour_worked") %>%
-    rename("year" = "...1")
 
     
     
@@ -309,7 +289,7 @@ UK_regional_output_per_hour <-
 
 #Jobs
 
-years <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls", sheet = "Jobs", range = "A7:A27") %>% 
+years <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls", sheet = "Jobs", range = "A7:A28") %>% 
     rename(year = ...1)
 
 UK_jobs <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls", sheet = "Jobs", range = "A7:R28") %>%
@@ -578,5 +558,39 @@ UK_regional_hours <-
                                  subsector_letter %in% other_services ~ "other_services",
                                  TRUE ~ subsector_letter),
            info = "hours"
+    )  %>%
+    relocate(industry:info, .before = subsector_letter)
+
+
+#Grand Table
+
+UK_regional_output_per_job <-
+    rbind(UK_output_per_job,
+          scotland_output_per_job,
+          london_output_per_job,
+          NE_output_per_job,
+          NW_output_per_job,
+          yorkshire_and_humber_output_per_job,
+          E_midlands_output_per_job,
+          W_midlands_output_per_job,
+          E_output_per_job,
+          SE_output_per_job,
+          SW_output_per_job,
+          wales_output_per_job,
+          NI_output_per_job) %>%
+    mutate(industry =  case_when(subsector_letter %in% natural_res_and_util ~ "natural_resources_and_utilities",
+                                 subsector_letter %in% construction ~ "construction",
+                                 subsector_letter %in% manufacturing ~ "manufacturing",
+                                 subsector_letter %in% telecoms ~ "telecoms",
+                                 subsector_letter %in% trade ~ "trade",
+                                 subsector_letter %in% leisure_and_entertainment ~ "leisure_and_entertainment",
+                                 subsector_letter %in% transport ~ "transport",
+                                 subsector_letter %in% ed_and_health ~ "education_and_health",
+                                 subsector_letter %in% prof_and_biz_services ~ "prof_and_biz_services",
+                                 subsector_letter %in% public_admin_and_def ~ "public_admin_and_defence",
+                                 subsector_letter %in% financial_services ~ "financial_services",
+                                 subsector_letter %in% other_services ~ "other_services",
+                                 TRUE ~ subsector_letter),
+           info = "output_per_job"
     )  %>%
     relocate(industry:info, .before = subsector_letter)
