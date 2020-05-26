@@ -1,0 +1,505 @@
+NACE_code,industry,GDP_measure,country,data
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Belgium,25.666164046112716
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Bulgaria,2.600903884657278
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Czech Republic,14.059709219430738
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Denmark,31.74844376084907
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Germany,19.497268885904244
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Estonia,16.888828145448624
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Ireland,9.591132922908013
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Greece,5.210344775950185
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Spain,19.887198189658797
+A,"Agriculture, forestry and fishing",output_euros_per_hour,France,18.03665404018438
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Croatia,6.929568598013016
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Italy,10.513915007770224
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Cyprus,6.659444925776628
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Latvia,6.589355134047178
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Lithuania,7.373407595448802
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Luxembourg,45.3330877128813
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Hungary,10.46666116676291
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Netherlands,34.2962455736582
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Austria,8.913166226074349
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Poland,4.10980319551287
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Portugal,5.537473194860172
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Romania,1.984814093597721
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Slovenia,4.70952843209319
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Slovakia,26.193605894388245
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Finland,16.099877342173237
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Sweden,18.351986183049966
+A,"Agriculture, forestry and fishing",output_euros_per_hour,United Kingdom,13.60585098264209
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Norway,19.970741685199975
+A,"Agriculture, forestry and fishing",output_euros_per_hour,Switzerland,8.29373598253101
+B-E,Industry (except construction),output_euros_per_hour,Belgium,60.19409442148983
+B-E,Industry (except construction),output_euros_per_hour,Bulgaria,12.304375983997106
+B-E,Industry (except construction),output_euros_per_hour,Czech Republic,23.72004017216236
+B-E,Industry (except construction),output_euros_per_hour,Denmark,68.35846137281982
+B-E,Industry (except construction),output_euros_per_hour,Germany,52.43710306144793
+B-E,Industry (except construction),output_euros_per_hour,Estonia,17.08604087092467
+B-E,Industry (except construction),output_euros_per_hour,Ireland,72.69760735142366
+B-E,Industry (except construction),output_euros_per_hour,Greece,27.0745445133026
+B-E,Industry (except construction),output_euros_per_hour,Spain,44.38977416278082
+B-E,Industry (except construction),output_euros_per_hour,France,47.50528786657205
+B-E,Industry (except construction),output_euros_per_hour,Croatia,14.181170385121792
+B-E,Industry (except construction),output_euros_per_hour,Italy,36.409605010564846
+B-E,Industry (except construction),output_euros_per_hour,Cyprus,16.99435516784062
+B-E,Industry (except construction),output_euros_per_hour,Latvia,15.128084906607379
+B-E,Industry (except construction),output_euros_per_hour,Lithuania,22.91286099935352
+B-E,Industry (except construction),output_euros_per_hour,Luxembourg,51.18177188463291
+B-E,Industry (except construction),output_euros_per_hour,Hungary,22.33904360844332
+B-E,Industry (except construction),output_euros_per_hour,Netherlands,57.89436540019707
+B-E,Industry (except construction),output_euros_per_hour,Austria,47.06401536644957
+B-E,Industry (except construction),output_euros_per_hour,Poland,17.32030176976795
+B-E,Industry (except construction),output_euros_per_hour,Portugal,22.571197875719363
+B-E,Industry (except construction),output_euros_per_hour,Romania,16.334907616672247
+B-E,Industry (except construction),output_euros_per_hour,Slovenia,24.36653471942327
+B-E,Industry (except construction),output_euros_per_hour,Slovakia,24.173612177214117
+B-E,Industry (except construction),output_euros_per_hour,Finland,49.0255770650141
+B-E,Industry (except construction),output_euros_per_hour,Sweden,52.33732488713485
+B-E,Industry (except construction),output_euros_per_hour,United Kingdom,43.64804329843655
+B-E,Industry (except construction),output_euros_per_hour,Norway,144.8668170486416
+B-E,Industry (except construction),output_euros_per_hour,Switzerland,66.16981938533519
+F,Construction,output_euros_per_hour,Belgium,38.875636319675095
+F,Construction,output_euros_per_hour,Bulgaria,9.65628874416506
+F,Construction,output_euros_per_hour,Czech Republic,13.176580024942009
+F,Construction,output_euros_per_hour,Denmark,24.296773562015332
+F,Construction,output_euros_per_hour,Germany,20.687573800989785
+F,Construction,output_euros_per_hour,Estonia,13.679279719096751
+F,Construction,output_euros_per_hour,Ireland,25.15028260820223
+F,Construction,output_euros_per_hour,Greece,15.91199866064496
+F,Construction,output_euros_per_hour,Spain,34.858223349049574
+F,Construction,output_euros_per_hour,France,24.922213892493758
+F,Construction,output_euros_per_hour,Croatia,14.690133130543717
+F,Construction,output_euros_per_hour,Italy,26.37087461468024
+F,Construction,output_euros_per_hour,Cyprus,16.32755105005824
+F,Construction,output_euros_per_hour,Latvia,12.876720948119496
+F,Construction,output_euros_per_hour,Lithuania,16.51165016764474
+F,Construction,output_euros_per_hour,Luxembourg,26.817043844728605
+F,Construction,output_euros_per_hour,Hungary,12.63562326024755
+F,Construction,output_euros_per_hour,Netherlands,25.56691373856942
+F,Construction,output_euros_per_hour,Austria,30.35337645886777
+F,Construction,output_euros_per_hour,Poland,14.020818277988385
+F,Construction,output_euros_per_hour,Portugal,19.46037148581657
+F,Construction,output_euros_per_hour,Romania,16.120418641789744
+F,Construction,output_euros_per_hour,Slovenia,21.43437754135037
+F,Construction,output_euros_per_hour,Slovakia,21.70216386459677
+F,Construction,output_euros_per_hour,Finland,18.734527309240463
+F,Construction,output_euros_per_hour,Sweden,20.00005974054992
+F,Construction,output_euros_per_hour,United Kingdom,23.759840567086897
+F,Construction,output_euros_per_hour,Norway,30.22459521819936
+F,Construction,output_euros_per_hour,Switzerland,23.37681744318345
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Belgium,41.93782280681983
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Bulgaria,8.787119938891205
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Czech Republic,15.501727233340032
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Denmark,34.50570596037249
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Germany,29.749803938777724
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Estonia,14.98199133224867
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Ireland,25.012768962605946
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Greece,13.549916336622935
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Spain,23.12435507799611
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,France,32.254398476251275
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Croatia,11.301189069697992
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Italy,24.551166792579075
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Cyprus,18.66310989078456
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Latvia,13.350245532069986
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Lithuania,20.37052049719945
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Luxembourg,53.57625271840184
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Hungary,13.172047522086128
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Netherlands,34.89759590928291
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Austria,32.86642715279919
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Poland,17.3471824969292
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Portugal,17.315535280437214
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Romania,11.66154851683431
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Slovenia,21.734769132635538
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Slovakia,16.907243796384048
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Finland,25.818164134899135
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Sweden,31.100338184436755
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,United Kingdom,22.67443798279236
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Norway,33.832932981290035
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",output_euros_per_hour,Switzerland,43.00905375252711
+J,Information and communication,output_euros_per_hour,Belgium,59.65124969013643
+J,Information and communication,output_euros_per_hour,Bulgaria,29.345818600793088
+J,Information and communication,output_euros_per_hour,Czech Republic,40.03371270477589
+J,Information and communication,output_euros_per_hour,Denmark,46.876352970768494
+J,Information and communication,output_euros_per_hour,Germany,60.08252179316182
+J,Information and communication,output_euros_per_hour,Estonia,31.065192665274992
+J,Information and communication,output_euros_per_hour,Ireland,100.30013730965483
+J,Information and communication,output_euros_per_hour,Greece,27.128820301575153
+J,Information and communication,output_euros_per_hour,Spain,43.961949301206246
+J,Information and communication,output_euros_per_hour,France,62.209431698160515
+J,Information and communication,output_euros_per_hour,Croatia,27.066587488077236
+J,Information and communication,output_euros_per_hour,Italy,42.77362969189718
+J,Information and communication,output_euros_per_hour,Cyprus,45.57860971112864
+J,Information and communication,output_euros_per_hour,Latvia,27.264607688840357
+J,Information and communication,output_euros_per_hour,Lithuania,41.381074251674626
+J,Information and communication,output_euros_per_hour,Luxembourg,77.89428488282303
+J,Information and communication,output_euros_per_hour,Hungary,32.826332037885194
+J,Information and communication,output_euros_per_hour,Netherlands,47.66398016410604
+J,Information and communication,output_euros_per_hour,Austria,45.30272600042343
+J,Information and communication,output_euros_per_hour,Poland,37.1120390482366
+J,Information and communication,output_euros_per_hour,Portugal,33.88186904636287
+J,Information and communication,output_euros_per_hour,Romania,51.61647666055763
+J,Information and communication,output_euros_per_hour,Slovenia,31.433198802887564
+J,Information and communication,output_euros_per_hour,Slovakia,34.1350447064355
+J,Information and communication,output_euros_per_hour,Finland,47.68444627245274
+J,Information and communication,output_euros_per_hour,Sweden,56.98004149625676
+J,Information and communication,output_euros_per_hour,United Kingdom,37.67683889675341
+J,Information and communication,output_euros_per_hour,Norway,55.95548266621952
+J,Information and communication,output_euros_per_hour,Switzerland,45.14949347930953
+K,Financial and insurance activities,output_euros_per_hour,Belgium,88.103379847198525
+K,Financial and insurance activities,output_euros_per_hour,Bulgaria,63.41031294719477
+K,Financial and insurance activities,output_euros_per_hour,Czech Republic,59.11678387959226
+K,Financial and insurance activities,output_euros_per_hour,Denmark,72.01052439581822
+K,Financial and insurance activities,output_euros_per_hour,Germany,51.460369312484175
+K,Financial and insurance activities,output_euros_per_hour,Estonia,57.22182718255072
+K,Financial and insurance activities,output_euros_per_hour,Ireland,62.39700639707928
+K,Financial and insurance activities,output_euros_per_hour,Greece,49.92683971796048
+K,Financial and insurance activities,output_euros_per_hour,Spain,55.78497828664123
+K,Financial and insurance activities,output_euros_per_hour,France,53.23990869108
+K,Financial and insurance activities,output_euros_per_hour,Croatia,56.95132546630444
+K,Financial and insurance activities,output_euros_per_hour,Italy,59.4052224732922
+K,Financial and insurance activities,output_euros_per_hour,Cyprus,64.28431374822682
+K,Financial and insurance activities,output_euros_per_hour,Latvia,46.942672572096036
+K,Financial and insurance activities,output_euros_per_hour,Lithuania,37.76051885253395
+K,Financial and insurance activities,output_euros_per_hour,Luxembourg,106.82522696340425
+K,Financial and insurance activities,output_euros_per_hour,Hungary,41.11691381417997
+K,Financial and insurance activities,output_euros_per_hour,Netherlands,90.4515929622939
+K,Financial and insurance activities,output_euros_per_hour,Austria,48.69025789724145
+K,Financial and insurance activities,output_euros_per_hour,Poland,41.660573757862664
+K,Financial and insurance activities,output_euros_per_hour,Portugal,65.20089444515055
+K,Financial and insurance activities,output_euros_per_hour,Romania,60.824347997756476
+K,Financial and insurance activities,output_euros_per_hour,Slovenia,40.17433315836103
+K,Financial and insurance activities,output_euros_per_hour,Slovakia,60.43752068066387
+K,Financial and insurance activities,output_euros_per_hour,Finland,47.199389364654735
+K,Financial and insurance activities,output_euros_per_hour,Sweden,76.47034368835581
+K,Financial and insurance activities,output_euros_per_hour,United Kingdom,48.359562828932084
+K,Financial and insurance activities,output_euros_per_hour,Norway,109.50965555631717
+K,Financial and insurance activities,output_euros_per_hour,Switzerland,63.24405438758707
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Belgium,24.53515687997425
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Bulgaria,14.696489412618114
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Czech Republic,19.914815133515948
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Denmark,26.976614978611646
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Germany,31.992896517689033
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Estonia,24.905669509467614
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Ireland,36.499863129343865
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Greece,12.507424876374564
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Spain,19.172541917173053
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,France,31.13475085985314
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Croatia,26.218404940539987
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Italy,23.328083126707398
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Cyprus,26.30600339182278
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Latvia,16.257271302418065
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Lithuania,21.93811636109875
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Luxembourg,31.517263918851018
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Hungary,20.75822158594203
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Netherlands,25.068246705703977
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Austria,26.914732561027293
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Poland,26.01240608443253
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Portugal,13.464220384891137
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Romania,31.738111488674658
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Slovenia,18.069892318754277
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Slovakia,22.41582626849324
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Finland,21.420447016079418
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Sweden,33.3001221954617
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,United Kingdom,18.235530132362364
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Norway,31.906888100855173
+M-N,"Professional, scientific and technical activities; administrative and support service activities",output_euros_per_hour,Switzerland,39.53762228257521
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Belgium,28.173123564900127
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Bulgaria,20.90348941436913
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Czech Republic,25.96555207873772
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Denmark,24.77941321159943
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Germany,27.90071180505047
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Estonia,15.937557575383051
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Ireland,22.530639542005883
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Greece,25.603642296837524
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Spain,24.391741765288025
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,France,29.202898509521713
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Croatia,15.80239878399671
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Italy,30.344280657388357
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Cyprus,22.854169134401104
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Latvia,16.806651928524126
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Lithuania,20.712295282043026
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Luxembourg,26.35375571788791
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Hungary,20.251412918833086
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Netherlands,30.641628826834914
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Austria,24.06814101511311
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Poland,18.018083850852992
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Portugal,19.083982461147695
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Romania,28.28248110166766
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Slovenia,19.711916458772897
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Slovakia,22.305587856138747
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Finland,22.141681827192794
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Sweden,15.606318604800165
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,United Kingdom,20.535203434111303
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Norway,22.91630699259695
+O-Q,"Public administration, defence, education, human health and social work activities",output_euros_per_hour,Switzerland,25.54192181365963
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Belgium,19.696975722459403
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Bulgaria,18.49269448116618
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Czech Republic,17.043863185873782
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Denmark,22.360613242193434
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Germany,22.099464837721257
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Estonia,10.017288256052616
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Ireland,17.449499916017242
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Greece,12.48949674179642
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Spain,14.695442590510666
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,France,18.401619410704605
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Croatia,17.817716893096893
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Italy,11.860532452235352
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Cyprus,11.860090036362976
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Latvia,14.4664768571752
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Lithuania,13.692357203921532
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Luxembourg,22.562137125057436
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Hungary,17.172896253573576
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Netherlands,20.69420426742752
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Austria,17.624550194530386
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Poland,18.45907002133462
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Portugal,11.212669015185336
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Romania,25.433938509887376
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Slovenia,17.00271090578936
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Slovakia,35.463180846536076
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Finland,17.115953375231847
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Sweden,18.43701957133856
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,United Kingdom,17.968866585856865
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Norway,20.898155136451464
+R-U,"Arts, entertainment and recreation; other service activities",output_euros_per_hour,Switzerland,19.18431171417123
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Bulgaria,0.03762024178160783
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Czech Republic,0.15523011970834655
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Denmark,0.09561539656421103
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Germany,0.20742712435285404
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Estonia,-0.21282513838496497
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Ireland,0.14911693741362053
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Greece,-0.036331398887805455
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Spain,0.007651544883959582
+A,"Agriculture, forestry and fishing",productivity_growth_pct,France,-0.07354402889096345
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Croatia,0.22078573979758076
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Italy,0.013393879899172623
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Cyprus,0.004080265954260476
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Latvia,-0.08315891141697307
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Lithuania,0.06340078593318443
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Luxembourg,0.1917874170269065
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Hungary,0.1343591131097115
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Netherlands,0.026261934200954018
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Austria,0.07789768910808847
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Poland,-0.020128106988105854
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Portugal,0.053407523059869844
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Romania,0.0963884324369002
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Slovenia,0.04603439585968072
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Slovakia,-0.029593887856029122
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Finland,0.11427697290748329
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Sweden,0.1221608645167962
+A,"Agriculture, forestry and fishing",productivity_growth_pct,United Kingdom,0.04759055102847465
+A,"Agriculture, forestry and fishing",productivity_growth_pct,Norway,-0.08273671184872045
+B-E,Industry (except construction),productivity_growth_pct,Bulgaria,0.04306486061908266
+B-E,Industry (except construction),productivity_growth_pct,Czech Republic,0.04230038397603386
+B-E,Industry (except construction),productivity_growth_pct,Denmark,0.010816438368186576
+B-E,Industry (except construction),productivity_growth_pct,Germany,0.041322490408109314
+B-E,Industry (except construction),productivity_growth_pct,Estonia,-0.034100640467962906
+B-E,Industry (except construction),productivity_growth_pct,Ireland,0.753785373396767
+B-E,Industry (except construction),productivity_growth_pct,Greece,9.277397643931984e-4
+B-E,Industry (except construction),productivity_growth_pct,Spain,0.028572102372016683
+B-E,Industry (except construction),productivity_growth_pct,France,0.04580039816447945
+B-E,Industry (except construction),productivity_growth_pct,Croatia,0.11458163151400602
+B-E,Industry (except construction),productivity_growth_pct,Italy,0.012490617112350222
+B-E,Industry (except construction),productivity_growth_pct,Cyprus,0.07805002358101043
+B-E,Industry (except construction),productivity_growth_pct,Latvia,0.13464382251958917
+B-E,Industry (except construction),productivity_growth_pct,Lithuania,-0.028536088279687344
+B-E,Industry (except construction),productivity_growth_pct,Luxembourg,-0.012871072388167093
+B-E,Industry (except construction),productivity_growth_pct,Hungary,0.08862498903578264
+B-E,Industry (except construction),productivity_growth_pct,Netherlands,-0.006264689206233465
+B-E,Industry (except construction),productivity_growth_pct,Austria,0.013204893181479438
+B-E,Industry (except construction),productivity_growth_pct,Poland,0.01980372499708216
+B-E,Industry (except construction),productivity_growth_pct,Portugal,-0.0022043717302381305
+B-E,Industry (except construction),productivity_growth_pct,Romania,0.08545887147729703
+B-E,Industry (except construction),productivity_growth_pct,Slovenia,0.033199962616762946
+B-E,Industry (except construction),productivity_growth_pct,Slovakia,0.11352506331096235
+B-E,Industry (except construction),productivity_growth_pct,Finland,0.021210313871272035
+B-E,Industry (except construction),productivity_growth_pct,Sweden,0.012797330246517413
+B-E,Industry (except construction),productivity_growth_pct,United Kingdom,0.025096696699267174
+B-E,Industry (except construction),productivity_growth_pct,Norway,0.10835901265701664
+F,Construction,productivity_growth_pct,Bulgaria,0.019686647567434434
+F,Construction,productivity_growth_pct,Czech Republic,0.03184858255713152
+F,Construction,productivity_growth_pct,Denmark,0.011465139658817902
+F,Construction,productivity_growth_pct,Germany,0.01911560920347788
+F,Construction,productivity_growth_pct,Estonia,0.03195886633865408
+F,Construction,productivity_growth_pct,Ireland,0.009196466047184382
+F,Construction,productivity_growth_pct,Greece,-0.006725843343368787
+F,Construction,productivity_growth_pct,Spain,-0.047825853700185994
+F,Construction,productivity_growth_pct,France,0.01892453036751718
+F,Construction,productivity_growth_pct,Croatia,-0.041574736686448066
+F,Construction,productivity_growth_pct,Italy,0.021676441212585162
+F,Construction,productivity_growth_pct,Cyprus,0.022424448506843664
+F,Construction,productivity_growth_pct,Latvia,-0.1798848955042004
+F,Construction,productivity_growth_pct,Lithuania,-0.1349067701201243
+F,Construction,productivity_growth_pct,Luxembourg,0.010528872147572699
+F,Construction,productivity_growth_pct,Hungary,-0.10998441979813289
+F,Construction,productivity_growth_pct,Netherlands,0.18047463666526675
+F,Construction,productivity_growth_pct,Austria,-0.02181139364908047
+F,Construction,productivity_growth_pct,Poland,-0.07510252029849396
+F,Construction,productivity_growth_pct,Portugal,-0.03397677884260952
+F,Construction,productivity_growth_pct,Romania,0.06094707616160333
+F,Construction,productivity_growth_pct,Slovenia,-0.0445546019485461
+F,Construction,productivity_growth_pct,Slovakia,0.004853609115754276
+F,Construction,productivity_growth_pct,Finland,0.018937222757046346
+F,Construction,productivity_growth_pct,Sweden,0.043669972623423314
+F,Construction,productivity_growth_pct,United Kingdom,0.026134430932798214
+F,Construction,productivity_growth_pct,Norway,-0.005747297515503846
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Bulgaria,0.07392434332785469
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Czech Republic,0.04930588146631809
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Denmark,-0.023404108244898802
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Germany,0.02128859886992429
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Estonia,0.010551216876384384
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Ireland,0.07138641522103417
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Greece,-0.04989226626378318
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Spain,0.02653837029232875
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,France,0.027709269079372545
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Croatia,0.174016304569363
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Italy,-0.004523443364898072
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Cyprus,0.013294396709617295
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Latvia,0.10501739280720401
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Lithuania,0.03689941486512738
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Luxembourg,-0.11458574295999968
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Hungary,0.007797485927976577
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Netherlands,0.019425194847271232
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Austria,0.01700688352998525
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Poland,0.044104169552993344
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Portugal,-0.005025043761708647
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Romania,0.1596512346426915
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Slovenia,0.07531216842262212
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Slovakia,0.0550137522028713
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Finland,0.010387554819634603
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Sweden,0.023889070524158118
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,United Kingdom,0.03469471789455292
+G-I,"Wholesale and retail trade, transport, accommodation and food service activities",productivity_growth_pct,Norway,0.0017311967559827668
+J,Information and communication,productivity_growth_pct,Bulgaria,-0.08274969561643852
+J,Information and communication,productivity_growth_pct,Czech Republic,0.0710099800525752
+J,Information and communication,productivity_growth_pct,Denmark,0.11628836685594357
+J,Information and communication,productivity_growth_pct,Germany,0.02597170737729848
+J,Information and communication,productivity_growth_pct,Estonia,-0.08222484930747109
+J,Information and communication,productivity_growth_pct,Ireland,0.16840315423787566
+J,Information and communication,productivity_growth_pct,Greece,-0.09588155880237048
+J,Information and communication,productivity_growth_pct,Spain,-0.023294790991667647
+J,Information and communication,productivity_growth_pct,France,0.031334875237122084
+J,Information and communication,productivity_growth_pct,Croatia,-0.16943833459007107
+J,Information and communication,productivity_growth_pct,Italy,-0.0023437279559125335
+J,Information and communication,productivity_growth_pct,Cyprus,0.028906879526640727
+J,Information and communication,productivity_growth_pct,Latvia,-0.03600501980313875
+J,Information and communication,productivity_growth_pct,Lithuania,-0.09217788901279844
+J,Information and communication,productivity_growth_pct,Luxembourg,0.4257725874062901
+J,Information and communication,productivity_growth_pct,Hungary,-0.035481876199612516
+J,Information and communication,productivity_growth_pct,Netherlands,0.01158682002513678
+J,Information and communication,productivity_growth_pct,Austria,0.032218959035115846
+J,Information and communication,productivity_growth_pct,Poland,0.09988553115858756
+J,Information and communication,productivity_growth_pct,Portugal,-0.07987078078397591
+J,Information and communication,productivity_growth_pct,Romania,-0.07127973233947393
+J,Information and communication,productivity_growth_pct,Slovenia,-0.0028937465531096995
+J,Information and communication,productivity_growth_pct,Slovakia,0.0016716732085304553
+J,Information and communication,productivity_growth_pct,Finland,0.03732129601765499
+J,Information and communication,productivity_growth_pct,Sweden,0.3172583578188528
+J,Information and communication,productivity_growth_pct,United Kingdom,0.10096355259051837
+J,Information and communication,productivity_growth_pct,Norway,0.040725352877298615
+K,Financial and insurance activities,productivity_growth_pct,Bulgaria,-0.02440973906188748
+K,Financial and insurance activities,productivity_growth_pct,Czech Republic,0.17305094933245835
+K,Financial and insurance activities,productivity_growth_pct,Denmark,-0.10960605114270627
+K,Financial and insurance activities,productivity_growth_pct,Germany,0.02964179143399126
+K,Financial and insurance activities,productivity_growth_pct,Estonia,-0.21902659232441124
+K,Financial and insurance activities,productivity_growth_pct,Ireland,0.11476346472855758
+K,Financial and insurance activities,productivity_growth_pct,Greece,5.509580623792587e-4
+K,Financial and insurance activities,productivity_growth_pct,Spain,-0.0556134564960622
+K,Financial and insurance activities,productivity_growth_pct,France,-0.02544340750383367
+K,Financial and insurance activities,productivity_growth_pct,Croatia,-0.018109386928298776
+K,Financial and insurance activities,productivity_growth_pct,Italy,-0.03408647264719533
+K,Financial and insurance activities,productivity_growth_pct,Cyprus,-0.056481798182254295
+K,Financial and insurance activities,productivity_growth_pct,Latvia,0.0065131814354557616
+K,Financial and insurance activities,productivity_growth_pct,Lithuania,-0.010741341644289748
+K,Financial and insurance activities,productivity_growth_pct,Luxembourg,-0.031263013197657785
+K,Financial and insurance activities,productivity_growth_pct,Hungary,0.055669739844568245
+K,Financial and insurance activities,productivity_growth_pct,Netherlands,0.03445182015737114
+K,Financial and insurance activities,productivity_growth_pct,Austria,0.035202554619020665
+K,Financial and insurance activities,productivity_growth_pct,Poland,0.17463597744134574
+K,Financial and insurance activities,productivity_growth_pct,Portugal,-0.03982037527160842
+K,Financial and insurance activities,productivity_growth_pct,Romania,-0.0538941025428038
+K,Financial and insurance activities,productivity_growth_pct,Slovenia,0.03902339787365361
+K,Financial and insurance activities,productivity_growth_pct,Slovakia,0.018288186023144304
+K,Financial and insurance activities,productivity_growth_pct,Finland,-0.02047702601083612
+K,Financial and insurance activities,productivity_growth_pct,Sweden,0.06467492470681435
+K,Financial and insurance activities,productivity_growth_pct,United Kingdom,-0.0017373091153818354
+K,Financial and insurance activities,productivity_growth_pct,Norway,0.11022847082520215
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Bulgaria,0.04568291365469501
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Czech Republic,0.04829006289146798
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Denmark,0.017621401916344537
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Germany,-0.003529124649651272
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Estonia,0.02644456385531191
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Ireland,0.31601733565224355
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Greece,-0.07520250479772084
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Spain,0.03470441249160339
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,France,-0.015632315752819204
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Croatia,-0.1641707628786797
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Italy,-0.02978754612938661
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Cyprus,-0.011827520133505964
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Latvia,-0.022334113862428784
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Lithuania,-0.05882293366146185
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Luxembourg,0.017005224287260923
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Hungary,-0.00761491168119699
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Netherlands,0.024369137522632256
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Austria,0.016320342522304854
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Poland,0.12799124860477296
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Portugal,-0.03216390740905406
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Romania,0.05269184318817821
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Slovenia,0.02338683813976372
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Slovakia,-0.08627690737629323
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Finland,0.004462609172459109
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Sweden,0.027523254293023713
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,United Kingdom,0.017820061573015078
+M-N,"Professional, scientific and technical activities; administrative and support service activities",productivity_growth_pct,Norway,-0.0267402178720082
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Bulgaria,0.019492882513680643
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Czech Republic,0.004116870082903068
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Denmark,0.010105624833817162
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Germany,0.005855961975985258
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Estonia,0.05304765886066698
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Ireland,0.02794705975593259
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Greece,-0.03655797973604491
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Spain,0.013199765102963834
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,France,0.00918993278069924
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Croatia,0.08328010242518569
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Italy,-0.024783608591470774
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Cyprus,0.015911406253176885
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Latvia,0.14128163324942555
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Lithuania,-0.07351578280541582
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Luxembourg,-0.02673626072996904
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Hungary,-0.0804931385196962
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Netherlands,0.004720287244949439
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Austria,3.06300813710525e-5
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Poland,0.022987356804079928
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Portugal,0.027455823751607822
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Romania,-0.16338318919319927
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Slovenia,0.0205282369890174
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Slovakia,-0.006042689958244085
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Finland,-0.0027040784055406553
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Sweden,-0.021793851226929895
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,United Kingdom,0.006035054750434643
+O-Q,"Public administration, defence, education, human health and social work activities",productivity_growth_pct,Norway,0.00808336356237338
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Bulgaria,-0.028003810868682533
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Czech Republic,0.016489106257657316
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Denmark,0.014464685175916037
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Germany,0.015685401278504596
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Estonia,-0.05042501525058363
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Ireland,-0.0022882317880104086
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Greece,0.042545775684468046
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Spain,-0.010159201977849808
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,France,0.023611436220484894
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Croatia,-0.17354945246430298
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Italy,-0.009893063990289885
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Cyprus,0.017803296483930087
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Latvia,-0.2607637745412922
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Lithuania,-0.07497912519409078
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Luxembourg,-0.11839936821794594
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Hungary,-0.0820055165588588
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Netherlands,0.016831895220669635
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Austria,0.0033031497167652635
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Poland,-0.12614771652974321
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Portugal,0.05886455074341512
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Romania,-0.02783793112510613
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Slovenia,0.042465673366504086
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Slovakia,-0.004081304096585137
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Finland,0.0016228395486772573
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Sweden,0.05430388746691128
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,United Kingdom,0.04205905107823438
+R-U,"Arts, entertainment and recreation; other service activities",productivity_growth_pct,Norway,0.009703736048327194

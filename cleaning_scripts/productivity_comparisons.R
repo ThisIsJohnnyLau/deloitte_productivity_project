@@ -1,20 +1,24 @@
-europe_prod <-
+
+
+# EU28 snapshot
+rbind(
+# European country productivity
     read_xls("raw_data/data/country_comparisons/International Labour Productivity - Europe.xls",
              sheet = "Table 1",
              skip = 3) %>% 
-    select(-"A*10 (excl L)") %>% 
-    head(9) %>%
-    pivot_longer(Belgium : Switzerland, names_to = "country", values_to = "output_per_hour_by_industry (EUR)") %>% 
-    rename("industry" = "NACE Industry")
-
-europe_prod_growth <-
+    mutate(GDP_measure = "output_euros_per_hour") %>% 
+    pivot_longer(Belgium : Switzerland, names_to = "country", values_to = "data"),
+#  European productivity growth
     read_xls("raw_data/data/country_comparisons/International Labour Productivity - Europe.xls",
              sheet = "Table 2",
-             skip = 3) %>% 
-    select(-"A*10 (excl L)") %>% 
-    head(9) %>%
-    pivot_longer(Bulgaria : Norway, names_to = "country", values_to = "productivity_growth_pct") %>% 
-    rename("industry" = "NACE Industry")
+             skip = 3) %>%
+    mutate(GDP_measure = "productivity_growth_pct") %>% 
+    pivot_longer(Bulgaria : Norway, names_to = "country", values_to = "data")
+) %>%
+    rename("industry" = "NACE Industry",
+           "NACE_code" = "A*10 (excl L)") %>% 
+    drop_na() %>%
+    write_csv("clean_data/EU_comparisons_by_sector")
 
 
 
