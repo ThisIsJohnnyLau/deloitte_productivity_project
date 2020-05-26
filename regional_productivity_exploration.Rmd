@@ -12,6 +12,17 @@ Workforce jobs by region and industry (seasonally adjusted) excel file using Sta
 
 
 ```{r}
+reg_ind_prod<-
+    read_csv("clean_data/UK_regional_productivity")
+
+reg_ind_prod %>%
+distinct(info_type)
+
+reg_ind_prod %>%
+select
+```
+```{r}
+
 UK_Labour_Productivity_Jobs_in_Regions_by_Industry %>%
     filter(year_month == max(year_month)) %>%
     group_by(industry) %>% 
