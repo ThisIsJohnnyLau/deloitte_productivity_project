@@ -1780,104 +1780,25 @@ summary {
 
 
 <!-- rnb-text-begin -->
-<p>Workforce jobs by region and industry (seasonally adjusted) excel file using Standard Industrial Classification (SIC) standards</p>
-<p>• Jobs • Hours</p>
+<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
+<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Cmd+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MSwibnJvdyI6MTN9LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFSeTI2RE1CQmNDTkFHaVFxcGx4NzVBWkNxWHZJQmJkV3FqMFBUS09uUkFUZWdFRHN5UnUyeC85eDd5QnJzS1BqZ3g0NTNkbmJXSC9lcnUzQVZBc0FFSmdFdUg2L2dMejRmMHhtQTUyTGdnQWRUZGY1aTBuVVBBTVM0SXYzZ0xsNzA3WEtlYzFrVFZ1ZzRlT1dzNEV4SDRUc1hza3dlU0NQSHlKS2VrSnN2THJaTldRbWFZSmxFbGpSNWFuZHJLdlI3cE5qSlcxVW9sY2FBcW9BTmV1YzZjOTVheWdOeXB1d3ZTVTBOT2U0Ym80SWx6NEwyaHNhejhCblpZZkl3QndNR2dtNHFkRHRPblFyK2s1bjBTSTNyRDdldTYvN3RtbmxOR3J0bVdCQkpzbStCZkl3T0Z1V0M3eVVxSXNsVkgrTmJaRWRZUU53eTFVbVI1bVhMdHVudFRDbm9Id1hkbnFOUGMzY0dUYmZUdFh6amxySk54YWhwdmlacld1dmdDaTMzanJPOXFOaHA1SWcybWVTU21Md3c1N1ZCZW5Od09BSlhYa25za0FJQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["region"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"UK"},{"1":"Scotland"},{"1":"London"},{"1":"North East"},{"1":"North West"},{"1":"Yorkshire and the Humber"},{"1":"East Midlands"},{"1":"West Midlands"},{"1":"East"},{"1":"South East"},{"1":"South West"},{"1":"Wales"},{"1":"Northern Ireland"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[13]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5VS19MYWJvdXJfUHJvZHVjdGl2aXR5X0pvYnNfaW5fUmVnaW9uc19ieV9JbmR1c3RyeSAlPiVcbiAgICBmaWx0ZXIoeWVhcl9tb250aCA9PSBtYXgoeWVhcl9tb250aCkpICU+JVxuICAgIGdyb3VwX2J5KGluZHVzdHJ5KSAlPiUgXG4gICAgc3VtbWFyaXNlKHRvdGFsX2pvYnMgPSBzdW0oam9icykpICU+JSBcbiAgICBhcnJhbmdlKGRlc2ModG90YWxfam9icykpXG5cbmBgYCJ9 -->
-<pre class="r"><code>
-UK_Labour_Productivity_Jobs_in_Regions_by_Industry %&gt;%
-    filter(year_month == max(year_month)) %&gt;%
-    group_by(industry) %&gt;% 
-    summarise(total_jobs = sum(jobs)) %&gt;% 
-    arrange(desc(total_jobs))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2V0d2QoKVxuXG5gYGAifQ== -->
+<pre class="r"><code>getwd()
 </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiL1VzZXJzL0pvaG5ueS9maW5hbF9wcm9qZWN0L2RlbG9pdHRlX3Byb2R1Y3Rpdml0eV9wcm9qZWN0XCJcbiJ9 -->
+<pre><code>[1] &quot;/Users/Johnny/final_project/deloitte_productivity_project&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvdGxhbmRfam9icyAlPiVcbiAgICBmaWx0ZXIoeWVhcl9tb250aCA9PSBtYXgoeWVhcl9tb250aCkpICU+JVxuICAgIGdyb3VwX2J5KGluZHVzdHJ5KSAlPiUgXG4gICAgc3VtbWFyaXNlKHRvdGFsX2pvYnMgPSBzdW0oam9icykpICU+JSBcbiAgICBhcnJhbmdlKGRlc2ModG90YWxfam9icykpXG5gYGAifQ== -->
-<pre class="r"><code>scotland_jobs %&gt;%
-    filter(year_month == max(year_month)) %&gt;%
-    group_by(industry) %&gt;% 
-    summarise(total_jobs = sum(jobs)) %&gt;% 
-    arrange(desc(total_jobs))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfcmVnaW9uYWxfb3V0cHV0X3Blcl9ob3VyICU+JSBcbiAgICBmaWx0ZXIoeWVhciA9PSBtYXgoeWVhciksXG4gICAgICAgICAgIHN1YnNlY3Rvcl9sZXR0ZXIgPT0gXCJhbGxfaW5kdXN0cmllc1wiKVxuYGBgIn0= -->
-<pre class="r"><code>UK_regional_output_per_hour %&gt;% 
-    filter(year == max(year),
-           subsector_letter == &quot;all_industries&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfcmVnaW9uYWxfb3V0cHV0X3Blcl9ob3VyICU+JSBcbiAgICBmaWx0ZXIoeWVhciA9PSBtYXgoeWVhciksXG4gICAgICAgICAgIGluZHVzdHJ5ICE9IFwiYWxsX2luZHVzdHJpZXNcIikgJT4lXG4gICAgZ3JvdXBfYnkocmVnaW9uLCBpbmR1c3RyeSkgJT4lIFxuICAgIHN1bW1hcmlzZShpbmR1c3RyeV9vdXRwdXRfcGVyX2hvdXIgPSBzdW0ob3V0cHV0X3Blcl9ob3VyKSkgJT4lIFxuICAgIGFycmFuZ2UoaW5kdXN0cnlfb3V0cHV0X3Blcl9ob3VyKVxuYGBgIn0= -->
-<pre class="r"><code>UK_regional_output_per_hour %&gt;% 
-    filter(year == max(year),
-           industry != &quot;all_industries&quot;) %&gt;%
-    group_by(region, industry) %&gt;% 
-    summarise(industry_output_per_hour = sum(output_per_hour)) %&gt;% 
-    arrange(industry_output_per_hour)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfcmVnaW9uYWxfb3V0cHV0X3Blcl9qb2IgJT4lIFxuICAgIGZpbHRlcih5ZWFyID09IG1heCh5ZWFyKSxcbiAgICAgICAgICAgaW5kdXN0cnkgIT0gXCJhbGxfaW5kdXN0cmllc1wiKSAlPiVcbiAgICBncm91cF9ieShyZWdpb24sIGluZHVzdHJ5KSAlPiUgXG4gICAgc3VtbWFyaXNlKGluZHVzdHJ5X291dHB1dF9wZXJfam9iID0gc3VtKG91dHB1dF9wZXJfam9iKSkgJT4lIFxuICAgIGFycmFuZ2UoaW5kdXN0cnlfb3V0cHV0X3Blcl9qb2IpXG5gYGAifQ== -->
-<pre class="r"><code>UK_regional_output_per_job %&gt;% 
-    filter(year == max(year),
-           industry != &quot;all_industries&quot;) %&gt;%
-    group_by(region, industry) %&gt;% 
-    summarise(industry_output_per_job = sum(output_per_job)) %&gt;% 
-    arrange(industry_output_per_job)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfcmVnaW9uYWxfb3V0cHV0X3Blcl9qb2IgJT4lXG4gICAgZmlsdGVyKGluZHVzdHJ5ID09IFwiZmluYW5jaWFsX3NlcnZpY2VzXCIpICU+JVxuICAgIGdyb3VwX2J5KHllYXIsIHJlZ2lvbiwgaW5kdXN0cnkpICU+JVxuICAgIHN1bW1hcmlzZShvdXRwdXRfcGVyX2pvYiA9IHN1bShvdXRwdXRfcGVyX2pvYikpICU+JSBcbiAgICBnZ3Bsb3QoKSArXG4gICAgYWVzKHggPSB5ZWFyLCB5ID0gb3V0cHV0X3Blcl9qb2IsIGNvbG91ciA9IHJlZ2lvbikgJT4lIFxuICAgIGdlb21fbGluZSgpXG5gYGAifQ== -->
-<pre class="r"><code>UK_regional_output_per_job %&gt;%
-    filter(industry == &quot;financial_services&quot;) %&gt;%
-    group_by(year, region, industry) %&gt;%
-    summarise(output_per_job = sum(output_per_job)) %&gt;% 
-    ggplot() +
-    aes(x = year, y = output_per_job, colour = region) %&gt;% 
-    geom_line()</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvdGxhbmRfb3V0cHV0X3Blcl9qb2JcbmBgYCJ9 -->
-<pre class="r"><code>scotland_output_per_job</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfcmVnaW9uYWxfcHJvZHVjdGl2aXR5X2RhdGEgPC0gcmVhZF9jc3YoXCJjbGVhbl9kYXRhL1VLX3JlZ2lvbmFsX3Byb2R1Y3Rpdml0eVwiKVxuYGBgIn0= -->
-<pre class="r"><code>UK_regional_productivity_data &lt;- read_csv(&quot;clean_data/UK_regional_productivity&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
+<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Cmd+Option+I</em>.</p>
+<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
+<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKV29ya2ZvcmNlIGpvYnMgYnkgcmVnaW9uIGFuZCBpbmR1c3RyeSAoc2Vhc29uYWxseSBhZGp1c3RlZCkgZXhjZWwgZmlsZSB1c2luZyBTdGFuZGFyZCBJbmR1c3RyaWFsIENsYXNzaWZpY2F0aW9uIChTSUMpIHN0YW5kYXJkcwoK4oCiIEpvYnMK4oCiIEhvdXJzCgoKCgpgYGB7cn0KcmVnX2luZF9wcm9kPC0KICAgIHJlYWRfY3N2KCJjbGVhbl9kYXRhL1VLX3JlZ2lvbmFsX3Byb2R1Y3Rpdml0eSIpCgpyZWdfaW5kX3Byb2QgJT4lCmRpc3RpbmN0KGluZm9fdHlwZSkKCnJlZ19pbmRfcHJvZCAlPiUKc2VsZWN0CmBgYApgYGB7cn0KClVLX0xhYm91cl9Qcm9kdWN0aXZpdHlfSm9ic19pbl9SZWdpb25zX2J5X0luZHVzdHJ5ICU+JQogICAgZmlsdGVyKHllYXJfbW9udGggPT0gbWF4KHllYXJfbW9udGgpKSAlPiUKICAgIGdyb3VwX2J5KGluZHVzdHJ5KSAlPiUgCiAgICBzdW1tYXJpc2UodG90YWxfam9icyA9IHN1bShqb2JzKSkgJT4lIAogICAgYXJyYW5nZShkZXNjKHRvdGFsX2pvYnMpKQoKYGBgCgpgYGB7cn0Kc2NvdGxhbmRfam9icyAlPiUKICAgIGZpbHRlcih5ZWFyX21vbnRoID09IG1heCh5ZWFyX21vbnRoKSkgJT4lCiAgICBncm91cF9ieShpbmR1c3RyeSkgJT4lIAogICAgc3VtbWFyaXNlKHRvdGFsX2pvYnMgPSBzdW0oam9icykpICU+JSAKICAgIGFycmFuZ2UoZGVzYyh0b3RhbF9qb2JzKSkKYGBgCgoKCgoKYGBge3J9ClVLX3JlZ2lvbmFsX291dHB1dF9wZXJfaG91ciAlPiUgCiAgICBmaWx0ZXIoeWVhciA9PSBtYXgoeWVhciksCiAgICAgICAgICAgc3Vic2VjdG9yX2xldHRlciA9PSAiYWxsX2luZHVzdHJpZXMiKQpgYGAKCmBgYHtyfQpVS19yZWdpb25hbF9vdXRwdXRfcGVyX2hvdXIgJT4lIAogICAgZmlsdGVyKHllYXIgPT0gbWF4KHllYXIpLAogICAgICAgICAgIGluZHVzdHJ5ICE9ICJhbGxfaW5kdXN0cmllcyIpICU+JQogICAgZ3JvdXBfYnkocmVnaW9uLCBpbmR1c3RyeSkgJT4lIAogICAgc3VtbWFyaXNlKGluZHVzdHJ5X291dHB1dF9wZXJfaG91ciA9IHN1bShvdXRwdXRfcGVyX2hvdXIpKSAlPiUgCiAgICBhcnJhbmdlKGluZHVzdHJ5X291dHB1dF9wZXJfaG91cikKYGBgCgpgYGB7cn0KVUtfcmVnaW9uYWxfb3V0cHV0X3Blcl9qb2IgJT4lIAogICAgZmlsdGVyKHllYXIgPT0gbWF4KHllYXIpLAogICAgICAgICAgIGluZHVzdHJ5ICE9ICJhbGxfaW5kdXN0cmllcyIpICU+JQogICAgZ3JvdXBfYnkocmVnaW9uLCBpbmR1c3RyeSkgJT4lIAogICAgc3VtbWFyaXNlKGluZHVzdHJ5X291dHB1dF9wZXJfam9iID0gc3VtKG91dHB1dF9wZXJfam9iKSkgJT4lIAogICAgYXJyYW5nZShpbmR1c3RyeV9vdXRwdXRfcGVyX2pvYikKYGBgCgpgYGB7cn0KVUtfcmVnaW9uYWxfb3V0cHV0X3Blcl9qb2IgJT4lCiAgICBmaWx0ZXIoaW5kdXN0cnkgPT0gImZpbmFuY2lhbF9zZXJ2aWNlcyIpICU+JQogICAgZ3JvdXBfYnkoeWVhciwgcmVnaW9uLCBpbmR1c3RyeSkgJT4lCiAgICBzdW1tYXJpc2Uob3V0cHV0X3Blcl9qb2IgPSBzdW0ob3V0cHV0X3Blcl9qb2IpKSAlPiUgCiAgICBnZ3Bsb3QoKSArCiAgICBhZXMoeCA9IHllYXIsIHkgPSBvdXRwdXRfcGVyX2pvYiwgY29sb3VyID0gcmVnaW9uKSAlPiUgCiAgICBnZW9tX2xpbmUoKQpgYGAKCmBgYHtyfQpzY290bGFuZF9vdXRwdXRfcGVyX2pvYgpgYGAKCmBgYHtyfQpVS19yZWdpb25hbF9wcm9kdWN0aXZpdHlfZGF0YSA8LSByZWFkX2NzdigiY2xlYW5fZGF0YS9VS19yZWdpb25hbF9wcm9kdWN0aXZpdHkiKQpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KZ2V0d2QoKQpgYGAKCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDbWQrT3B0aW9uK0kqLgoKV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDbWQrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4gCgpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuCgo=</div>
 
 
 
@@ -1926,7 +1847,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("regional_productivity_exploration.Rmd");
+  window.initializeSourceEmbed("test.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

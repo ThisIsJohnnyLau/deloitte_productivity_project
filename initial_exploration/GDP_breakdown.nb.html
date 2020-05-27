@@ -1780,15 +1780,32 @@ summary {
 
 
 <!-- rnb-text-begin -->
-<div id="what-factors-can-be-improved-to-increase-employee-andor-business-productivity-across-uk-regions" class="section level1">
-<h1>What factors can be improved to increase employee and/or business productivity across UK regions?</h1>
-</div>
-<div id="example-of-initiatives-within-other-nations-to-increase-local-productivity" class="section level1">
-<h1>Example of initiatives within other nations to increase local productivity</h1>
 <!-- rnb-text-end -->
-</div>
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0d2QoXCIvVXNlcnMvSm9obm55L2ZpbmFsX3Byb2plY3QvZGVsb2l0dGVfcHJvZHVjdGl2aXR5X3Byb2plY3RcIilcblxuYGBgIn0= -->
+<pre class="r"><code>setwd(&quot;/Users/Johnny/final_project/deloitte_productivity_project&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGhlIHdvcmtpbmcgZGlyZWN0b3J5IHdhcyBjaGFuZ2VkIHRvIC9Vc2Vycy9Kb2hubnkvZmluYWxfcHJvamVjdC9kZWxvaXR0ZV9wcm9kdWN0aXZpdHlfcHJvamVjdCBpbnNpZGUgYSBub3RlYm9vayBjaHVuay4gVGhlIHdvcmtpbmcgZGlyZWN0b3J5IHdpbGwgYmUgcmVzZXQgd2hlbiB0aGUgY2h1bmsgaXMgZmluaXNoZWQgcnVubmluZy4gVXNlIHRoZSBrbml0ciByb290LmRpciBvcHRpb24gaW4gdGhlIHNldHVwIGNodW5rIHRvIGNoYW5nZSB0aGUgd29ya2luZyBkaXJlY3RvcnkgZm9yIG5vdGVib29rIGNodW5rcy5cbiJ9 -->
+<pre><code>The working directory was changed to /Users/Johnny/final_project/deloitte_productivity_project inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the working directory for notebook chunks.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfZ2RwX2JyZWFrZG93biAlPiUgXG4gICAgZmlsdGVyKEdEUF9tZWFzdXJlID09IFwiR3Jvc3MgRG9tZXNpY1wiKSAlPiUgXG4gICAgZ2dwbG90KCkgK1xuICAgIGFlcyh4ID0geWVhciwgeSA9IHZhbHVlKSArXG4gICAgZ2VvbV9saW5lKClcblxuXG5cbmBgYCJ9 -->
+<pre class="r"><code>UK_gdp_breakdown %&gt;% 
+    filter(GDP_measure == &quot;Gross Domesic&quot;) %&gt;% 
+    ggplot() +
+    aes(x = year, y = value) +
+    geom_line()
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyBXaGF0IGZhY3RvcnMgY2FuIGJlIGltcHJvdmVkIHRvIGluY3JlYXNlIGVtcGxveWVlIGFuZC9vciBidXNpbmVzcyBwcm9kdWN0aXZpdHkgYWNyb3NzIFVLIHJlZ2lvbnM/CgojIEV4YW1wbGUgb2YgaW5pdGlhdGl2ZXMgd2l0aGluIG90aGVyIG5hdGlvbnMgdG8gaW5jcmVhc2UgbG9jYWwgcHJvZHVjdGl2aXR5Cg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyfQpVS19nZHBfYnJlYWtkb3duIDwtIHJlYWRfY3N2KCJjbGVhbl9kYXRhL1VLX2dkcF9icmVha2Rvd25fYW5udWFsLmNzdiIpCgpnZXR3ZCgpCnNldHdkKCIvVXNlcnMvSm9obm55L2ZpbmFsX3Byb2plY3QvZGVsb2l0dGVfcHJvZHVjdGl2aXR5X3Byb2plY3QiKQpwb3RlbnRpYWxfbW9kZWxfZmVhdHVyZXNfQ1ZNIDwtIFVLX2dkcF9icmVha2Rvd24gJT4lIAogICAgZ3JvdXBfYnkoR0RQX21lYXN1cmUpICU+JSAKICAgIHN1bW1hcmlzZShjb3VudCA9IG4oKSkgJT4lIAogICAgYXJyYW5nZShkZXNjKGNvdW50KSkgJT4lIAogICAgZmlsdGVyKGNvdW50ID4gNjUpICU+JSAKICAgIHNlbGVjdChHRFBfbWVhc3VyZSkgJT4lIAogICAgZmlsdGVyKHN0cl9kZXRlY3QoR0RQX21lYXN1cmUsICJDVk18Y2hhaW4iKSkgJT4lIAogICAgcHJpbnQoKQoKcG90ZW50aWFsX21vZGVsX2ZlYXR1cmVzX0NWTSA8LSBVS19nZHBfYnJlYWtkb3duICU+JSAKICAgIGdyb3VwX2J5KEdEUF9tZWFzdXJlKSAlPiUgCiAgICBzdW1tYXJpc2UoY291bnQgPSBuKCkpICU+JSAKICAgIGFycmFuZ2UoZGVzYyhjb3VudCkpICU+JSAKICAgIGZpbHRlcihjb3VudCA+IDY1KSAlPiUgCiAgICBzZWxlY3QoR0RQX21lYXN1cmUpICU+JSAKICAgIGZpbHRlcihzdHJfZGV0ZWN0KEdEUF9tZWFzdXJlLCAiR3Jvc3MgfFByb2R1Y3QiKSkgJT4lIAogICAgcHJpbnQoKQoKVUtfZ2RwX2JyZWFrZG93biA9IApnbG11bHRpKCkKCmBgYAoKYGBge3J9ClVLX2dkcF9icmVha2Rvd24gJT4lIAogICAgZmlsdGVyKEdEUF9tZWFzdXJlID09ICJHcm9zcyBEb21lc2ljIikgJT4lIAogICAgZ2dwbG90KCkgKwogICAgYWVzKHggPSB5ZWFyLCB5ID0gdmFsdWUpICsKICAgIGdlb21fbGluZSgpCgoKCmBgYAoK</div>
 
 
 
@@ -1837,7 +1854,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("solution.Rmd");
+  window.initializeSourceEmbed("GDP_breakdown.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

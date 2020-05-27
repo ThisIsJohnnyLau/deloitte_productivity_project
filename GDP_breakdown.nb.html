@@ -1780,24 +1780,51 @@ summary {
 
 
 <!-- rnb-text-begin -->
-<p>Workforce jobs by region and industry (seasonally adjusted) excel file using Standard Industrial Classigication (SIC) standards</p>
-<p>• Jobs • Hours</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfTGFib3VyX1Byb2R1Y3Rpdml0eV9Kb2JzX2luX1JlZ2lvbnNfYnlfSW5kdXN0cnkgJT4lXG4gICAgZmlsdGVyKHllYXJfbW9udGggPT0gbWF4KHllYXJfbW9udGgpKSAlPiVcbiAgICBncm91cF9ieShpbmR1c3RyeSkgJT4lIFxuICAgIHN1bW1hcmlzZSh0b3RhbF9qb2JzID0gc3VtKGpvYnMpKSAlPiUgXG4gICAgYXJyYW5nZShkZXNjKHRvdGFsX2pvYnMpKVxuYGBgIn0= -->
-<pre class="r"><code>UK_Labour_Productivity_Jobs_in_Regions_by_Industry %&gt;%
-    filter(year_month == max(year_month)) %&gt;%
-    group_by(industry) %&gt;% 
-    summarise(total_jobs = sum(jobs)) %&gt;% 
-    arrange(desc(total_jobs))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG90ZW50aWFsX21vZGVsX2ZlYXR1cmVzX0NWTSA8LSBVS19nZHBfYnJlYWtkb3duICU+JSBcbiAgICBncm91cF9ieShHRFBfbWVhc3VyZSkgJT4lIFxuICAgIHN1bW1hcmlzZShjb3VudCA9IG4oKSkgJT4lIFxuICAgIGFycmFuZ2UoZGVzYyhjb3VudCkpICU+JSBcbiAgICBmaWx0ZXIoY291bnQgPiA2NSkgJT4lIFxuICAgIHNlbGVjdChHRFBfbWVhc3VyZSkgJT4lXG4gICAgbXV0YXRlKEdEUF9tZWFzdXJlID0gdG9sb3dlcihHRFBfbWVhc3VyZSkpICU+JSBcbiAgICBmaWx0ZXIoc3RyX2RldGVjdChHRFBfbWVhc3VyZSwgXCJjaGFpbnxjdlwiKSkgJT4lIFxuICAgIHByaW50KClcblxuYGBgIn0= -->
+<pre class="r"><code>potential_model_features_CVM &lt;- UK_gdp_breakdown %&gt;% 
+    group_by(GDP_measure) %&gt;% 
+    summarise(count = n()) %&gt;% 
+    arrange(desc(count)) %&gt;% 
+    filter(count &gt; 65) %&gt;% 
+    select(GDP_measure) %&gt;%
+    mutate(GDP_measure = tolower(GDP_measure)) %&gt;% 
+    filter(str_detect(GDP_measure, &quot;chain|cv&quot;)) %&gt;% 
+    print()
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCB1bmdyb3VwaW5nIG91dHB1dCAob3ZlcnJpZGUgd2l0aCBgLmdyb3Vwc2AgYXJndW1lbnQpXG4ifQ== -->
 <pre><code>`summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFTTzI4VU1SQjJMdG1RVzkxQlJJSVVxdnlDdXlaTnlpc1FGUlVDS2QzSjU1M05HYnpqbFIrOEtsb0thaEJLRlltR0NvbUNGQlJVL0E1K0JBVlZqdkZMQ3J2UzZodC84L2htUEg3ODRPeWtQcXNaWTl0c2U1Zitpa3hXUFgzeWNIYksyTTZJRGx0c2g0MER2cUtnQXpJQ3VVLy9KRHNPb2ZHQ082bHh5YkZacm9FcnQ4NitlNzNSYmFSWDhzM1NnbmtoQmRqc3JKemhEZVREZlFYU2VnTXhHTkNCY1Z4aVIxWU9tSFljZmN1RjgwYmllU1luUXFOMXhvc2duN203clVTT1FuSTFGQnlUSU5wZW0xSnp6NEVDb2JzU2NOVDdsWkppeVp0T3Bta2FhQUZGYWZLMmRtc3d3N0xIeUtrcGtqTmd0VGZraUtuZVNTV2RwREJLREwwdWZ2d0t0OHNXMzd1RTM5cUVYMzRuL0x4SWVIbVI4TlBQakY4VGZueWI4TU9qaE8vL0pueDN4ZEwzMzhJcTVGMFUzNDlMeXhOTGJEemQyT3Q4cnAxMjFQa3p2YktEOUxIUkwrZWx4RFNVQ09xYnplYlBVRWNvYm90T0lldUdPejV2RGVYVDZYcVFja3YzWVdHVU5Bb3ZxaG9rYjVrQmNjZGo2S1NaaWJYSDU3T1RJQkRkNlp0bWUzTERIaVhKMFNhWHFuS3BYY0J6aVdXaGxlSXJVR1c3TkhFY2VON1RFeXR2cENiV3p1TTFGVVpvVlpnNEc3ditCeGNuRmlCSUF3QUEifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MSwibnJvdyI6NTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNjFYVzQvVU5oVE9MZ3dWVzFFaDlSbkpVcm5NRm1hazdzTHNLaElTQlFSdG53cWlFbStWTi9aazNDWjJzSjNablRmK1MvOEp6L3dtbHVOYkpzbDRMb3Y2NEpuazVIemZ1Zmo0Mkg3Nzh2M3h3ZnVESkVtdUpkZHV3QmpBWXpMNDY5MnIwV21TWE4rSGw3M2tlbkxUL0YrQTBvOVdrQ1MzWVR4T2tvL213d3VjZmFpWllwb0pybEJCbFVLRXFVb29YQ2drcG1pT2l4cWZnVHhGV21oY0lKb0pMc29GeXVZbFV2Z1IrdlJmNmFsK1A4TUY1aGsxc0FvdlNzbzFvRmhaQ2FrYnVKYVlVTVE0eW9VZ0N0MUhpc281eXd5L1k5eEt1SUhCbWZDby80K1FYdmdRVmdtekdlWTVWUWJOK0J6NGhHVDJOU3Rxd25pT2NNRnliZ3doVFA2cGxiYVBJOHZFOFlKaTJTVTg5aWJXOEdwV1d0SWwxUkw2Z3JEcGxFcHE0anVqK3B4U2lJaFVRL0NlY3NKMExla2h3cHhZSVo1VGlYTVFsTlhRbVR4c1VSMU5HWWU0WWFaVlhWYW1ORkNMeFdTUFYwek4xR3BDZnMwcEIrWUNjZ2tXYk9BcDJzaVdvdXE0azFsWHNFOXpLVXd0aXBJcXpUSlVTVUhxVEtOdU9KQW14aWxCYzFIVXBabERRaTlTSVBMZVBQOFdrcEppWmFMc3VITzZqZ2xtR21RYlBISDR5UnE4MTRQd1FSa01DOGhVc2ZBVFRJbVA0N2M0T2wzanVvcHl0YUk1Y1h4bWJWUDRUdUFqMXJCdWxPVjJwUzlxWGRWdEI1ZHBmYk1kdnM2eHpYNk5keUNHVERtZkduZGV6VVN0NkV3VVpIT2xvWlJqSTNNYUdhMTBLTHRScTRMZndKcHZMekF0T2c2ZzRXcUZvNGNJWXRObVhlZ1pSZWRDRnVSd1dkS2hHRjB6Y1NFNlI5dk9EVzJub0FBY29XcDgvTEFhUDRFeFFaR3VNKzR5WFVDYU1sd3hJNXNLV2RvZ1YxR3BRelU1MkdJOFluZlM3WlJwNkl1eHptNG5TdUYwaVI3MkZNTEdZTkZCdldYdDUwYS82Y2NkZzZzV0lvaW9rV1hCVGRwSmdHbUdUSm9WQmltRSt1TzhkbGsrMXpNa2pjaG41SjVISDNwLy9NYXhIZkFvQUlKL08yQ09JdlVXUVMzRW9vOThzcTVyMkcwSFNzVCtPNUswRHo1WlY2ZTcyVDdkdXBKN1JQM1Urb25iUGJVQmNJWFUvdUthOTlVbi9wUUxQb0owVHBrMld6UUFkZTBPVUx0bDU0Nmtjemh6R1FDMEY5aVByWUlITlJGMWxWYXJJSUk1NldLMk5vZ2UvRzRIM3JSVkZkTzkxOUcxNTRHMm1qYUh4a1o1MGxGMi9XTFlGR1ozTjE0MWRUK0NkaXNwcHYxVFJEdWY0NWpxZzRocXFLT0l1bTkwTWI5M25QaFI1MEM1SStpcEE2MmJ4eXRaRHRIdEJ2cWp0MlZzMm1pM01ib1cvU3hhK1I5cUxEVzFQVWxoV0pEaEhic1dCYU5nVkk3ZDV0QzUxd3c0NkN0L3B3bkM3MSsvL1BOdmYrVG82ZDhFOThZQmN3dkcva2Y0dWJ5OC9Od256Z3FzK3NRSEJHczhua3JBdzl1WEh1UTdZVE1Cb0gxejB4cjB3SHV5SjdoZGMrTUpHV1d6bXY4N09qb3hGdndWTGZIdTdibXJXdk84NTJ6dVgzcXVnZWU2UVhrT0I2N2dmSUhQYU9GZmZvQ1FiY1JqYUx4Y2gxQkFxdHhCSWtneVVRU0pEUzc1OGhVZWVPTUNZUTRBQUE9PSJ9 -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["industry"],"name":[1],"type":["chr"],"align":["left"]},{"label":["total_jobs"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"education_and_health","2":"7366"},{"1":"prof_and_biz_services","2":"5997"},{"1":"trade","2":"4966"},{"1":"leisure_and_entertainment","2":"3440"},{"1":"manufacturing","2":"2720"},{"1":"construction","2":"2382"},{"1":"financial_services","2":"1712"},{"1":"transport","2":"1708"},{"1":"telecoms","2":"1568"},{"1":"public_admin_and_defence","2":"1491"},{"1":"other_services","2":"959"},{"1":"natural_resources_and_utilities","2":"823"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[12]},"pages":{}}}
+{"columns":[{"label":["GDP_measure"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"acquisitions less disposals of valuables: total economy cvm sa, £m"},{"1":"balance of payments: imports: total trade in goods & services: cvm sa £m"},{"1":"balance of payments: trade in goods & services: total balance: cvm sa £m"},{"1":"balance of payments: trade in goods & services: total exports: cvm sa £m"},{"1":"changes in inventories including alignment adjustment - cvm nayear sa £m"},{"1":"cvm sa changes in inventories timing adjustment £m"},{"1":"difference between gdp(expenditure) and gdp(average) mp(cvm sa) £m"},{"1":"final consumption expenditure of npishs cvm sa £m"},{"1":"general government: final consumption expenditure: p3: cvm sa £m"},{"1":"gross domestic product (expenditure) chained volume index: sa"},{"1":"gross domestic product (expenditure) chained volume measure sa £m"},{"1":"gross domestic product (income) chained volume index: sa"},{"1":"gross domestic product index: cvm: seasonally adjusted"},{"1":"gross domestic product: chained volume measures: seasonally adjusted £m"},{"1":"gross value added at basic prices: output index: cvm sa"},{"1":"gross value added at basic prices:chained volume measures:seasonally adjusted £m"},{"1":"gross value added at basic prices:cvm:index:sa"},{"1":"household final consumption expenditure :national concept cvm sa - £m"},{"1":"tot adjustment to basic prices (general government + rest of the world) cvm sa £"},{"1":"total gross final expenditure (aligned) - p.3+p.5+p.6 : cvm sa £m"},{"1":"total gross fixed capital formation cvm sa £m"},{"1":"total national expenditure (aligned) - p.3+p.5: cvm sa £m"},{"1":"trade in goods:exports:total trade in goods:cvm:sa:£m"},{"1":"trade in goods:imports:total:cvm:sa: £m"},{"1":"trade in services:exports:total:cvm:sa:£m"},{"1":"trade in services:imports:total:cvm:sa:£m"},{"1":"expenditure based estimate annual growth rate cvm sa %"},{"1":"exports goods annual growth rate cvm sa %"},{"1":"exports services annual growth rate cvm sa %"},{"1":"general government annual growth rate yoy cvm sa %"},{"1":"gross domestic product: year on year growth: cvm sa %"},{"1":"gross final expenditure annual growth rate yoy cvm sa %"},{"1":"gross value added at basic prices annual growth cvm sa %"},{"1":"imports goods annual growth rate cvm sa %"},{"1":"imports services annual growth rate cvm sa %"},{"1":"income based estimate annual growth rate cvm sa %"},{"1":"non-profits institutions annual growth rate yoy cvm sa %"},{"1":"revisions to gdp cvm growth %"},{"1":"revisions to general government cvm growth %"},{"1":"revisions to gross fixed capital formation cvm growth %"},{"1":"revisions to households cvm growth %"},{"1":"revisions to npish cvm growth table %"},{"1":"revisions to total (domestic expenditure) cvm growth %"},{"1":"revisions to total export cvm growth %"},{"1":"revisions to total gva cvm growth %"},{"1":"revisions to total imports cvm growth %"},{"1":"total domestic expenditure annual growth rate yoy cvm sa %"},{"1":"total exports annual growth rate yoy cvm sa %"},{"1":"total fixed capital formation annual growth rate yoy cvm sa %"},{"1":"total imports annual growth rate yoy cvm sa %"},{"1":"total national household final consumption annual growth rate yoy cvm sa %"},{"1":"revisions to gdp cvm quarter on same quarter a year earlier. £m"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[52]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG90ZW50aWFsX21vZGVsX2ZlYXR1cmVzX0NWTSA8LSBVS19nZHBfYnJlYWtkb3duICU+JSBcbiAgICBncm91cF9ieShHRFBfbWVhc3VyZSkgJT4lIFxuICAgIHN1bW1hcmlzZShjb3VudCA9IG4oKSkgJT4lIFxuICAgIGFycmFuZ2UoZGVzYyhjb3VudCkpICU+JSBcbiAgICBmaWx0ZXIoY291bnQgPiA2NSkgJT4lXG4gICAgc2VsZWN0KEdEUF9tZWFzdXJlKSAlPiVcbiAgICBtdXRhdGUoR0RQX21lYXN1cmUgPSB0b2xvd2VyKEdEUF9tZWFzdXJlKSkgJT4lIFxuICAgIGZpbHRlcihzdHJfZGV0ZWN0KEdEUF9tZWFzdXJlLCBcIihncm9zcyBkb218R0RQfGRvbWVzdGljIHByb2QpXCIpKSAlPiVcbiAgICBwcmludCgpXG5cbmBgYCJ9 -->
+<pre class="r"><code>potential_model_features_CVM &lt;- UK_gdp_breakdown %&gt;% 
+    group_by(GDP_measure) %&gt;% 
+    summarise(count = n()) %&gt;% 
+    arrange(desc(count)) %&gt;% 
+    filter(count &gt; 65) %&gt;%
+    select(GDP_measure) %&gt;%
+    mutate(GDP_measure = tolower(GDP_measure)) %&gt;% 
+    filter(str_detect(GDP_measure, &quot;(gross dom|GDP|domestic prod)&quot;)) %&gt;%
+    print()
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCB1bmdyb3VwaW5nIG91dHB1dCAob3ZlcnJpZGUgd2l0aCBgLmdyb3Vwc2AgYXJndW1lbnQpXG4ifQ== -->
+<pre><code>`summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MSwibnJvdyI6MTZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNTJVMzI3VE1CVEczVzRaV2hGb0VpL2dHeVM0YUM1Z2d5b0lhYUR4N3dxRVFOb2RPbk84MXN5eEk5c1ozZDNlaFRmaGlYaUNsUlBIYnRkb0lWVXYwc1NuL243NXp1ZllYMDlPbjQ5T1I0U1FIYkt6aDFlQ2p5VDUvdTM5ZUVMSTdoQUhBN0pMOXV2N0hDYzk4Z1ZDRHZ6Vi9QRjZhclMxTk5jRnQwNHdXaHFkVjh6UkozeGVjcFVMVnhuK2xMSVpDTVZ6ZXFsbFZYQXFWTTduR2JWQXlIVU5lYnNOcE9CZ3NZNFUrdWQzRWV4c1NLcU00Y3JSTTdCK2ptRGNOcVpXbmo1dFRjb29TREZGcDltYXRVa1hVQ2lHdGYrRTFKUDBVcjlCVisrMmdhd2FpbUUzc01NT0dEaGFnTG5nYnFsblpVYlZtdmJ6NXRyZ3lJL1JBUzY3VmlEbEZZWDhaMlVkSnJZSytkV21XRkdVVXFBMDUrY1NuRGJaTXVmakRrUllqMzQ3Z2ZPaWgzTlozSzF1OHZsNHR6cnIyQVcyTDVnM0xkNnRyNWlDVWhYSVpSUVVwLzV5TTJyQStkMzFPRTNUbzVlVG5oM1dUamhTYjhOWTZYbUJkTlRWNGhVSFE3VnE3bzNlNTlXSTF3K21SQUhLdzZFVWkvYy9uSHo1RVpKcHpkOUhYQm8xRC9BYVh1UFBZckg0MndZekNiWU5IdVhnSUQwM3FNZlJUVXR5VDVkT2FJV2lZWDFVSmkzeHdMUUtCNVdxbmVSak5xdlV4ZmpaWWYyR2NNYVNZQytldC9GNTBMeHp1QWoxSkxEMnVKcmlkeEhOU3pqak1nd2VZc3UrNHhSWFJybllDbFp0NnJTRE9HL0V0SXdWM3h5NStRY0VIRVJ2SWdZQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["GDP_measure"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"gross domestic product (expenditure) chained volume index: sa"},{"1":"gross domestic product (expenditure) chained volume measure sa £m"},{"1":"gross domestic product (expenditure) current basic prices index sa"},{"1":"gross domestic product (expenditure) current basic prices: aligned:sa £m"},{"1":"gross domestic product (income) chained volume index: sa"},{"1":"gross domestic product (income) current basic prices index sa"},{"1":"gross domestic product (income) current basic prices: aligned: sa £m"},{"1":"gross domestic product at market prices: cp: nsa £m"},{"1":"gross domestic product at market prices: current price: seasonally adjusted £m"},{"1":"gross domestic product at market prices:implied deflator:sa"},{"1":"gross domestic product index: current price: seasonally adjusted"},{"1":"gross domestic product index: cvm: seasonally adjusted"},{"1":"gross domestic product: chained volume measures: seasonally adjusted £m"},{"1":"gross domestic expenditure annual deflator growth rate sa %...578"},{"1":"gross domestic product at market prices annual growth rate cp sa %"},{"1":"gross domestic product: year on year growth: cvm sa %"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[16]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
@@ -1805,39 +1832,42 @@ summary {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvdGxhbmRfam9icyAlPiVcbiAgICBmaWx0ZXIoeWVhcl9tb250aCA9PSBtYXgoeWVhcl9tb250aCkpICU+JVxuICAgIGdyb3VwX2J5KGluZHVzdHJ5KSAlPiUgXG4gICAgc3VtbWFyaXNlKHRvdGFsX2pvYnMgPSBzdW0oam9icykpICU+JSBcbiAgICBhcnJhbmdlKGRlc2ModG90YWxfam9icykpXG5gYGAifQ== -->
-<pre class="r"><code>scotland_jobs %&gt;%
-    filter(year_month == max(year_month)) %&gt;%
-    group_by(industry) %&gt;% 
-    summarise(total_jobs = sum(jobs)) %&gt;% 
-    arrange(desc(total_jobs))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG90ZW50aWFsX21vZGVsX2RlcGVuZGFudHMgPC0gVUtfZ2RwX2JyZWFrZG93biAlPiUgXG4gICAgZ3JvdXBfYnkoR0RQX21lYXN1cmUpICU+JSBcbiAgICBzdW1tYXJpc2UoY291bnQgPSBuKCkpICU+JSBcbiAgICBhcnJhbmdlKGRlc2MoY291bnQpKSAlPiUgXG4gICAgZmlsdGVyKGNvdW50ID4gNjUpICU+JVxuICAgIHNlbGVjdChHRFBfbWVhc3VyZSkgJT4lXG4gICAgZmlsdGVyKHN0cl9kZXRlY3QoR0RQX21lYXN1cmUsIFwiZ3Jvc3N8cHJvZHVjdFwiKSkgJT4lXG4gICAgcHJpbnQoKVxuXG5VS19nZHBfYnJlYWtkb3duID0gXG5nbG11bHRpKClcblxuXG5jaGFpbmVkX3BhdHRlcm4gPC0gYyhcImNoYWluXCIsIFwiY3ZcIilcblNBX3BhdHRlcm4gPC0gYyhcIiBzYSBcIiwgXCJzZWFzb25cIilcbmdkcF9wYXR0ZXJuIDwtIGMoXCJnZHBcIiwgXCJncm9zcyBkb21lc3RpY1wiLCBcImRvbWVzdGljIHByb2RcIilcblxuYGBgIn0= -->
+<pre class="r"><code>potential_model_dependants &lt;- UK_gdp_breakdown %&gt;% 
+    group_by(GDP_measure) %&gt;% 
+    summarise(count = n()) %&gt;% 
+    arrange(desc(count)) %&gt;% 
+    filter(count &gt; 65) %&gt;%
+    select(GDP_measure) %&gt;%
+    filter(str_detect(GDP_measure, &quot;gross|product&quot;)) %&gt;%
+    print()
+
+UK_gdp_breakdown = 
+glmulti()
+
+
+chained_pattern &lt;- c(&quot;chain&quot;, &quot;cv&quot;)
+SA_pattern &lt;- c(&quot; sa &quot;, &quot;season&quot;)
+gdp_pattern &lt;- c(&quot;gdp&quot;, &quot;gross domestic&quot;, &quot;domestic prod&quot;)
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCB1bmdyb3VwaW5nIG91dHB1dCAob3ZlcnJpZGUgd2l0aCBgLmdyb3Vwc2AgYXJndW1lbnQpXG4ifQ== -->
-<pre><code>`summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFTdTI1VU1SQjFOcm1CdmRxRmlJY0VGVit3MjBCQm1RSlJVa1NKRkFxMDhkcHpkdzIrNDRzZmhGQWh2b0JQeW1lazVCTW9xTE9NWHp5dUpldk1uSG5iYy9McS9IbDczakxHOXRuK0lkMkdSTmFjbmI1ZXZHVHNZRUxLSGp0ZzA0aWZ5ZWtoQ1pFOG9qc3Joa2NnZytCZUdWeHhsS3N0Y08yM3hmWjRzS1pMOUZwOVdUbXduNVFBVjR5TnQxeENVWjVxVUM1WVNNNkFIcXpuQ251U2lzTk1HSFRlQmhFckZXN2Vjd3dkRno1WWhadENQaG5DV2l1eDRySlh1U1VKSGFDb2xSNTBDamtLeGZXNG9TazFoRzR3dHRaOGhweFNrNk1GWjRJbHo1UXZlS1dWVjMvaTduclFJRXhmOVh2R2I4SCt6VTVNSE9ENDIwMThYWFo4OVRQajVZK01INzluM0Z4azdLNHp5cThaTHdyL3J2QnZDNTRVZk1QSytlL0RHdVI5S242VVBxMjBxbEFHZXNhcm9yZmVlSnJ2dlZtN1VmalVtc3RsVFRHUEtXSTN1OTN1MTdpTzBOelZPcFZzSmZkODJWbUtKKzEyRkhMSERQRVhLV2dTTjZvWkJlL1pFWEUvWU94RUxzUTI0SWZGaTFnZ21mT1pGM24yanp6SkpTZTdrcW9wcVE0Qk53cnJMalNhcjBIWGI2T0owOERMZ2RhcDdrQkxyRnVtWjZxTU1Mb3lhVFoyK3h1TFd2NXFTQU1BQUE9PSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["industry"],"name":[1],"type":["chr"],"align":["left"]},{"label":["total_jobs"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"education_and_health","2":"603"},{"1":"prof_and_biz_services","2":"415"},{"1":"trade","2":"382"},{"1":"leisure_and_entertainment","2":"281"},{"1":"construction","2":"187"},{"1":"manufacturing","2":"182"},{"1":"public_admin_and_defence","2":"164"},{"1":"financial_services","2":"131"},{"1":"transport","2":"119"},{"1":"natural_resources_and_utilities","2":"103"},{"1":"telecoms","2":"75"},{"1":"other_services","2":"60"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[12]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUE2MVJ1MDdETUJSMTh5aHRwRmFWV0pENGhtYmdJYkVnWlFBV21DZ1YzU0kzTVczQTJKSGpxSFJBZE9BL2tHRGtHL2dmQm42Qmh1dkVScFUzSkN4WnZ2ZjRIcDk3cmk5UEp2dkJKRUFJdWNodHcvWWhSUDc0Nm14NGhKRG5RTkpDSHVxcTh3R0t0dFV0N0w1aVJDOHJWWTNzRTlhZ2ZyRWhPdU56SFhWR0NaY1VzMVRuN1F2T1VzNnMrajZtTk01WVdoWlNaS1Q0RS9xZkx6VWVvOFgxNCtmb05ZcU9QNzZlNTIvUmFlZDliL2RweHhxT3ovRDlyN3l2UVc5SnNEQldCWmxsWUZVUFFnc3RkVDRveW1sQkVzbEZUSW1VeExENnZKUjVLZU9jaVBpV1R5M1JydUNMMEFqMzFLVFYvS3VxK3JhN1N5Z3VUSGNHREZJc2NYZ2pnQS9aMnFKczhWeEN2MEJ5eko5dmtsdkNBZ1lsVTUya3cyUmVzcnZoNFlGU3FPK2IxZE94dXhIN2phWlRXWE5yRXpiTEdESE5VendsMUF3RUxOZU93MXhrVEJvcmdCYWg1QktidWlEaDFDQzFPYlQrQWVPQ2J3THJBZ0FBIn0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["year"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["region"],"name":[2],"type":["chr"],"align":["left"]},{"label":["industry"],"name":[3],"type":["chr"],"align":["left"]},{"label":["subsector_letter"],"name":[4],"type":["chr"],"align":["left"]},{"label":["output_per_job"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"2016","2":"UK","3":"all_industries","4":"all_industries","5":"32.93236"},{"1":"2016","2":"Scotland","3":"all_industries","4":"all_industries","5":"32.48236"},{"1":"2016","2":"London","3":"all_industries","4":"all_industries","5":"42.06772"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVUtfZ2RwX2JyZWFrZG93biAlPiUgXG4gICAgZmlsdGVyKEdEUF9tZWFzdXJlID09IFwiR3Jvc3MgRG9tZXNpY1wiKSAlPiUgXG4gICAgZ2dwbG90KCkgK1xuICAgIGFlcyh4ID0geWVhciwgeSA9IHZhbHVlKSArXG4gICAgZ2VvbV9saW5lKClcblxuYGBgIn0= -->
+<pre class="r"><code>UK_gdp_breakdown %&gt;% 
+    filter(GDP_measure == &quot;Gross Domesic&quot;) %&gt;% 
+    ggplot() +
+    aes(x = year, y = value) +
+    geom_line()
+</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKV29ya2ZvcmNlIGpvYnMgYnkgcmVnaW9uIGFuZCBpbmR1c3RyeSAoc2Vhc29uYWxseSBhZGp1c3RlZCkgZXhjZWwgZmlsZSB1c2luZyBTdGFuZGFyZCBJbmR1c3RyaWFsIENsYXNzaWdpY2F0aW9uIChTSUMpIHN0YW5kYXJkcwoK4oCiIEpvYnMK4oCiIEhvdXJzCgoKCgpgYGB7cn0KVUtfTGFib3VyX1Byb2R1Y3Rpdml0eV9Kb2JzX2luX1JlZ2lvbnNfYnlfSW5kdXN0cnkgJT4lCiAgICBmaWx0ZXIoeWVhcl9tb250aCA9PSBtYXgoeWVhcl9tb250aCkpICU+JQogICAgZ3JvdXBfYnkoaW5kdXN0cnkpICU+JSAKICAgIHN1bW1hcmlzZSh0b3RhbF9qb2JzID0gc3VtKGpvYnMpKSAlPiUgCiAgICBhcnJhbmdlKGRlc2ModG90YWxfam9icykpCgpgYGAKCmBgYHtyfQpzY290bGFuZF9qb2JzICU+JQogICAgZmlsdGVyKHllYXJfbW9udGggPT0gbWF4KHllYXJfbW9udGgpKSAlPiUKICAgIGdyb3VwX2J5KGluZHVzdHJ5KSAlPiUgCiAgICBzdW1tYXJpc2UodG90YWxfam9icyA9IHN1bShqb2JzKSkgJT4lIAogICAgYXJyYW5nZShkZXNjKHRvdGFsX2pvYnMpKQpgYGAKCgoKCgpgYGB7cn0KVUtfcmVnaW9uYWxfb3V0cHV0X3Blcl9ob3VyICU+JSAKICAgIGZpbHRlcih5ZWFyID09IG1heCh5ZWFyKSwKICAgICAgICAgICBzdWJzZWN0b3JfbGV0dGVyID09ICJhbGxfaW5kdXN0cmllcyIpCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyfQpVS19nZHBfYnJlYWtkb3duIDwtIHJlYWRfY3N2KCJjbGVhbl9kYXRhL1VLX2dkcF9icmVha2Rvd25fYW5udWFsLmNzdiIpCgpwb3RlbnRpYWxfbW9kZWxfZmVhdHVyZXNfQ1ZNIDwtIFVLX2dkcF9icmVha2Rvd24gJT4lIAogICAgZ3JvdXBfYnkoR0RQX21lYXN1cmUpICU+JSAKICAgIHN1bW1hcmlzZShjb3VudCA9IG4oKSkgJT4lIAogICAgYXJyYW5nZShkZXNjKGNvdW50KSkgJT4lIAogICAgZmlsdGVyKGNvdW50ID4gNjUpICU+JSAKICAgIHNlbGVjdChHRFBfbWVhc3VyZSkgJT4lCiAgICBtdXRhdGUoR0RQX21lYXN1cmUgPSB0b2xvd2VyKEdEUF9tZWFzdXJlKSkgJT4lIAogICAgZmlsdGVyKHN0cl9kZXRlY3QoR0RQX21lYXN1cmUsICJjaGFpbnxjdiIpKSAlPiUgCiAgICBwcmludCgpCgoKYGBgCmBgYHtyfQoKcG90ZW50aWFsX21vZGVsX2ZlYXR1cmVzX0NWTSA8LSBVS19nZHBfYnJlYWtkb3duICU+JSAKICAgIGdyb3VwX2J5KEdEUF9tZWFzdXJlKSAlPiUgCiAgICBzdW1tYXJpc2UoY291bnQgPSBuKCkpICU+JSAKICAgIGFycmFuZ2UoZGVzYyhjb3VudCkpICU+JSAKICAgIGZpbHRlcihjb3VudCA+IDY1KSAlPiUKICAgIHNlbGVjdChHRFBfbWVhc3VyZSkgJT4lCiAgICBtdXRhdGUoR0RQX21lYXN1cmUgPSB0b2xvd2VyKEdEUF9tZWFzdXJlKSkgJT4lIAogICAgZmlsdGVyKHN0cl9kZXRlY3QoR0RQX21lYXN1cmUsICIoZ3Jvc3MgZG9tfEdEUHxkb21lc3RpYyBwcm9kKSIpKSAlPiUKICAgIHByaW50KCkKYGBgCgpgYGB7cn0KcG90ZW50aWFsX21vZGVsX2RlcGVuZGFudHMgPC0gVUtfZ2RwX2JyZWFrZG93biAlPiUgCiAgICBncm91cF9ieShHRFBfbWVhc3VyZSkgJT4lIAogICAgc3VtbWFyaXNlKGNvdW50ID0gbigpKSAlPiUgCiAgICBhcnJhbmdlKGRlc2MoY291bnQpKSAlPiUgCiAgICBmaWx0ZXIoY291bnQgPiA2NSkgJT4lCiAgICBzZWxlY3QoR0RQX21lYXN1cmUpICU+JQogICAgZmlsdGVyKHN0cl9kZXRlY3QoR0RQX21lYXN1cmUsICJncm9zc3xwcm9kdWN0IikpICU+JQogICAgcHJpbnQoKQoKVUtfZ2RwX2JyZWFrZG93biA9IApnbG11bHRpKCkKCgpjaGFpbmVkX3BhdHRlcm4gPC0gYygiY2hhaW4iLCAiY3YiKQpTQV9wYXR0ZXJuIDwtIGMoIiBzYSAiLCAic2Vhc29uIikKZ2RwX3BhdHRlcm4gPC0gYygiZ2RwIiwgImdyb3NzIGRvbWVzdGljIiwgImRvbWVzdGljIHByb2QiKQoKYGBgCgpgYGB7cn0KVUtfZ2RwX2JyZWFrZG93biAlPiUgCiAgICBmaWx0ZXIoR0RQX21lYXN1cmUgPT0gIkdyb3NzIERvbWVzaWMiKSAlPiUgCiAgICBnZ3Bsb3QoKSArCiAgICBhZXMoeCA9IHllYXIsIHkgPSB2YWx1ZSkgKwogICAgZ2VvbV9saW5lKCkKCmBgYAoK</div>
 
 
 
@@ -1886,7 +1916,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("cleaning_work_regions_sectors.Rmd");
+  window.initializeSourceEmbed("GDP_breakdown.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

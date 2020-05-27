@@ -1,0 +1,63 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+UK_gdp_breakdown <- read_csv("clean_data/UK_gdp_breakdown_annual.csv")
+
+potential_model_features_CVM <- UK_gdp_breakdown %>% 
+    group_by(GDP_measure) %>% 
+    summarise(count = n()) %>% 
+    arrange(desc(count)) %>% 
+    filter(count > 65) %>% 
+    select(GDP_measure) %>%
+    mutate(GDP_measure = tolower(GDP_measure)) %>% 
+    filter(str_detect(GDP_measure, "chain|cv")) %>% 
+    print()
+
+
+```
+```{r}
+
+potential_model_features_CVM <- UK_gdp_breakdown %>% 
+    group_by(GDP_measure) %>% 
+    summarise(count = n()) %>% 
+    arrange(desc(count)) %>% 
+    filter(count > 65) %>%
+    select(GDP_measure) %>%
+    mutate(GDP_measure = tolower(GDP_measure)) %>% 
+    filter(str_detect(GDP_measure, "(gross dom|GDP|domestic prod)")) %>%
+    print()
+```
+
+```{r}
+potential_model_dependants <- UK_gdp_breakdown %>% 
+    group_by(GDP_measure) %>% 
+    summarise(count = n()) %>% 
+    arrange(desc(count)) %>% 
+    filter(count > 65) %>%
+    select(GDP_measure) %>%
+    filter(str_detect(GDP_measure, "gross|product")) %>%
+    print()
+
+UK_gdp_breakdown = 
+glmulti()
+
+
+chained_pattern <- c("chain", "cv")
+SA_pattern <- c(" sa ", "season")
+gdp_pattern <- c("gdp", "gross domestic", "domestic prod")
+
+```
+
+```{r}
+UK_gdp_breakdown %>% 
+    filter(GDP_measure == "Gross Domesic") %>% 
+    ggplot() +
+    aes(x = year, y = value) +
+    geom_line()
+
+```
+
