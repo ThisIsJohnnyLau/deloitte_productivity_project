@@ -18,7 +18,7 @@ rbind(
     rename("industry" = "NACE Industry",
            "NACE_code" = "A*10 (excl L)") %>% 
     drop_na() %>%
-    write_csv("clean_data/EU_comparisons_by_sector")
+    write_csv("clean_data/EU_comparisons_by_sector.csv")
 
 
 
