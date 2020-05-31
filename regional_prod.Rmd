@@ -13,30 +13,231 @@ Workforce jobs by region and industry (seasonally adjusted) excel file using Sta
 
 ```{r}
 reg_ind_prod <-
-    read_csv("clean_data/UK_regional_productivity")
+    read_csv("clean_data/UK_regional_productivity.csv")
 
 reg_ind_prod %>%
-distinct(info_type)
+distinct(industry)
 
 reg_ind_prod %>%
 filter(region == "UK")
 ```
-```{r}
 
-UK_Labour_Productivity_Jobs_in_Regions_by_Industry %>%
+```{r}
+a <- reg_ind_prod %>%
+    filter(industry == "Education and Health",
+           info_type == "Output per hour worked",
+           region == "UK") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+          legend.position = "bottom") +
+    ggtitle("United Kingdom")+
+    ylim(0,35) +    ylab("Output per hour worked")
+
+b <- reg_ind_prod %>%
+    filter(industry == "Education and Health",
+           info_type == "Output per hour worked",
+           region == "Scotland") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_blank(),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+              legend.position = "bottom"
+            ) +
+    ggtitle("Scotland") +
+    ylim(0,35) +
+    ylab("Output per hour worked")
+
+
+ggarrange(a,b)
+```
+```{r}
+a <- reg_ind_prod %>%
+    filter(industry == "Education and Health",
+           info_type == "Output per hour worked",
+           region == "UK") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+          legend.position = "bottom") +
+    ggtitle("United Kingdom")
+
+b <- reg_ind_prod %>%
+    filter(industry == "Education and Health",
+           info_type == "Output per hour worked",
+           region == "Scotland") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_blank(),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+              legend.position = "bottom"
+            ) +
+    ggtitle("Scotland")
+
+
+ggarrange(a,b)
+```
+```{r}
+a <- reg_ind_prod %>%
+    filter(industry == "Financial Services",
+           info_type == "Output per hour worked",
+           region == "UK") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+          legend.position = "bottom") +
+    ggtitle("United Kingdom")
+
+b <- reg_ind_prod %>%
+    filter(industry == "Financial Services",
+           info_type == "Output per hour worked",
+           region == "Scotland") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_blank(),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+              legend.position = "bottom"
+            ) +
+    ggtitle("Scotland")
+
+
+ggarrange(a,b)
+```
+```{r}
+a <- reg_ind_prod %>%
+    filter(industry == "Financial Services",
+           info_type == "Output per hour worked",
+           region == "UK") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+          legend.position = "bottom") +
+    ggtitle("United Kingdom")
+
+b <- reg_ind_prod %>%
+    filter(industry == "Financial Services",
+           info_type == "Output per hour worked",
+           region == "Scotland") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_blank(),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+              legend.position = "bottom"
+            ) +
+    ggtitle("Scotland")
+
+
+ggarrange(a,b)
+```
+
+```{r}
+reg_ind_prod %>%
+    filter(industry == "Education and Health",
+           info_type == "Output per hour worked",
+           year == 2016) %>%
+    ggplot() +
+    aes(x = reorder(region, data), y = data, fill = region == "Scotland") +
+    geom_col() +
+    theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, face = "bold"),
+            axis.title.y = element_blank(),
+            axis.title.x = element_text(size = 15),
+              legend.position = "none"
+            ) +
+    coord_flip() +
+    ylab("Output per hour worked")
+```
+
+
++
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+          legend.position = "bottom") +
+    ggtitle("United Kingdom")
+
+b <- reg_ind_prod %>%
+    filter(industry == "Financial Services",
+           info_type == "Output per hour worked",
+           region == "Scotland") %>%
+    group_by(subsector_letter) %>%
+    arrange(subsector_letter) %>% 
+    ggplot() +
+    aes(x = year, y = data, group = subsector_letter, colour = subsector_letter) +
+    geom_line() +
+            theme(
+            axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size = 15, face = "bold"),
+            axis.text.y = element_blank(),
+            axis.title.x = element_blank(),
+            axis.title.y = element_text(angle = 90, size = 15),
+              legend.position = "bottom"
+            ) +
+    ggtitle("Scotland")
+```
+
+
+```{r}
+reg %>%
     filter(year_month == max(year_month)) %>%
     group_by(industry) %>% 
     summarise(total_jobs = sum(jobs)) %>% 
     arrange(desc(total_jobs))
 
-```
 
-```{r}
-scotland_jobs %>%
-    filter(year_month == max(year_month)) %>%
-    group_by(industry) %>% 
-    summarise(total_jobs = sum(jobs)) %>% 
-    arrange(desc(total_jobs))
 ```
 
 
@@ -44,36 +245,36 @@ scotland_jobs %>%
 
 
 ```{r}
-UK_regional_output_per_hour %>% 
+reg_ind_prod %>% 
     filter(year == max(year),
            subsector_letter == "all_industries")
 ```
 
 ```{r}
-UK_regional_output_per_hour %>% 
+reg_ind_prod %>% 
     filter(year == max(year),
            industry != "all_industries") %>%
     group_by(region, industry) %>% 
-    summarise(industry_output_per_hour = sum(output_per_hour)) %>% 
+    summarise(industry_output_per_hour = sum(data)) %>% 
     arrange(industry_output_per_hour)
 ```
 
 ```{r}
-UK_regional_output_per_job %>% 
+reg_ind_prod %>% 
     filter(year == max(year),
            industry != "all_industries") %>%
     group_by(region, industry) %>% 
-    summarise(industry_output_per_job = sum(output_per_job)) %>% 
+    summarise(industry_output_per_job = sum(data)) %>% 
     arrange(industry_output_per_job)
 ```
 
 ```{r}
-UK_regional_output_per_job %>%
+reg_ind_prod %>%
     filter(industry == "financial_services") %>%
     group_by(year, region, industry) %>%
-    summarise(output_per_job = sum(output_per_job)) %>% 
+    summarise(output_per_job = sum(data)) %>% 
     ggplot() +
-    aes(x = year, y = output_per_job, colour = region) %>% 
+    aes(x = year, y = data, colour = region) +
     geom_line()
 ```
 
