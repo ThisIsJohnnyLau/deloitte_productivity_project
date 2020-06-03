@@ -2,7 +2,7 @@
 
 
 # UK_output_per_job
-read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls",
+UK_output_per_job <- read_xls("raw_data/data/UK_productivity/UK Labour Productivity - Region by Industry.xls",
                               sheet = "OpJ (value)", range = "A7:R27") %>%
     mutate(region = "UK")
 
