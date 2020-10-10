@@ -1,59 +1,58 @@
 ---
-title: "R Notebook"
-output: html_notebook
+title: "Client brief considerations"
+output:
+  html_document:
+    df_print: paged
 ---
 
 Data was donated by Deloitte and comes from the Equifax Ignite Direct data platform, which will host over 50 open data sources.
 
 # Brief
 
-• Data & Challenge Insight – the depth of your investigation into the data and the maturity of your understanding of how productivity can be improved.
-• Insight Quality – the quality and level of detail expressed in your data insight including visualisations.
-• Concept Feasibility – the viability of your solution/concept in the wider context of the market such as practicality, cost & impact. 
+* Data & Challenge Insight – the depth of your investigation into the data and the maturity of your understanding of how productivity can be improved.
+* Insight Quality – the quality and level of detail expressed in your data insight including visualisations.
+* Concept Feasibility – the viability of your solution/concept in the wider context of the market such as practicality, cost & impact. 
 
 https://www.oecd.org/sdd/productivity-stats/40526851.pdf
 
 ## Initial comments
-• Data is extensive and unwieldy
-• Data comes in spreadsheets and is not formatted well and will require heavy cleaning
+* Data is extensive and unwieldy
+* Data comes in spreadsheets and is not formatted well and will require heavy cleaning
 
 ## Initial assessment
-• Amount of data cleaning could be reduced by targeting attention to key areas of interest
-• Keep in mind the accuracy of the data
-• 
+* Amount of data cleaning could be reduced by targeting attention to key areas of interest
+* Keep in mind the accuracy of the data
 
 ## Questions to answer
-• Are there other, cleaner, sources of the same data
-• How much of it is required to get started with initial exploration
-• How much of it is required for indepth analysis
-• Has the client oversimplified the problem in any way - e.g. part-employment, zero-hour contracts etc.
-• What has been the effect of changing sector dominance in UK
-• How about Scotland specifically
-• What are the effects of inflation, technological progress and economic crises
-• Uncertainty and crises / Brexit
-• Balance sheets, pensions, costs
-• Regulation
-• Investment in people, staff, technology and new methods
-• Communication - broadband, Corona
-• Incentivisation
-• Corona
-• Rents and key workers
-• Benefits system
-• UK economic balance versus others
-
-
+* Are there other, cleaner, sources of the same data
+* How much of it is required to get started with initial exploration
+* How much of it is required for indepth analysis
+* Has the client oversimplified the problem in any way - e.g. part-employment, zero-hour contracts etc.
+* What has been the effect of changing sector dominance in UK
+* How about Scotland specifically
+* What are the effects of inflation, technological progress and economic crises
+* Uncertainty and crises / Brexit
+* Balance sheets, pensions, costs
+* Regulation
+* Investment in people, staff, technology and new methods
+* Communication - broadband, Corona
+* Incentivisation
+* Corona
+* Rents and key workers
+* Benefits system
+* UK economic balance versus others
 
 
 # Initial thoughts
-• Careful planning might save some time
-• Explanatory versus predictive models
-• Is low productivity a natural course of events for developed countries?
+* Careful planning might save some time
+* Explanatory versus predictive models
+* Is low productivity a natural course of events for developed countries?
+
+
 # Focus on MVP
-Compartmentalise
-
-
-RMD plus presentation
-Key messages
+* Compartmentalise
+* RMD plus presentation
+* Key messages
 
 
 

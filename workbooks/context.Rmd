@@ -1,0 +1,38 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# “Productivity is commonly defined as a ratio between the output volume and the volume of inputs.
+
+# Measures how efficiently production inputs are being used in an economy to produce a given level of output.
+
+# Labour and capital inputs
+
+# Over the past decade, productivity has slowed down globally
+
+
+
+Constant price GDP per hour worked - G7
+```{r}
+
+G7_prod_hist %>%
+    ggplot() +
+    aes(x = year, y = GDP_per_hour_worked, colour = country) +
+    geom_line() +
+    theme(legend.position = "bottom") 
+
+# +
+#     scale_color_manual(values=c(UK = "#999999"))
+
+
+```
+
+
+# UK lags behind some other developed economies
+
+
+# local business development and the wider economy are affected by productivity
+
+```{r}
+```

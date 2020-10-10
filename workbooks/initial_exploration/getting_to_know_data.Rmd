@@ -1,0 +1,65 @@
+---
+title: "Getting to know the data"
+output: html_notebook
+---
+
+```{r}
+reg_ind_prod
+```
+```{r}
+reg_ind_prod %>%
+distinct(info_type)
+```
+
+```{r}
+reg_ind_prod %>%
+distinct(year)
+```
+
+```{r}
+potential_model_features_CVM <- UK_gdp_breakdown %>% 
+    group_by(GDP_measure) %>% 
+    summarise(count = n()) %>% 
+    arrange(desc(count)) %>% 
+    filter(count > 65) %>%
+    select(GDP_measure) %>%
+    mutate(GDP_measure = tolower(GDP_measure)) %>% 
+    filter(str_detect(GDP_measure, "prod")) %>%
+    print()
+```
+
+
+```{r}
+reg_ind_prod %>% 
+    filter(region == "Scotland") %>% 
+    print()
+```
+```{r}
+
+unique(reg_ind_prod$info_type)
+
+reg_ind_prod %>%
+    filter(industry != "All Industries",
+           info_type == "Output per job",
+           year == "2016"
+           ) %>%
+    group_by(subsector_letter) %>%
+            arrange(desc(data)) %>%
+            mutate(rank = row_number()) %>% 
+    filter(region == "Scotland") %>% 
+      arrange(desc(rank))
+
+
+
+```
+
+
+
+
+
+```{r}
+reg_ind_prod %>% 
+    filter(region == "Scotland") %>% 
+    print()
+```
+

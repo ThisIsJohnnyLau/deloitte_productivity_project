@@ -1,0 +1,40 @@
+---
+title: "The productivity problem"
+output: html_notebook
+---
+
+# Nod to the other deloitte projects
+
+
+# “Productivity is commonly defined as a ratio between the output volume and the volume of inputs.
+
+# Measures how efficiently production inputs are being used in an economy to produce a given level of output.
+
+# Labour and capital inputs
+
+
+
+
+
+# Main business question is generally: How can we improve productivity within Scotland and the UK overall?
+
+# Identify and target industries with low productivity levels
+
+
+# Example of initiatives within other nations to increase local productivity
+
+
+ 
+
+# What factors can be improved to increase employee and/or business productivity across UK regions?
+
+
+
+# Which industries are lagging behind in terms of productivity and how could they catch up?
+
+
+
+# Can we predict overall UK productivity rates?
+
+
+

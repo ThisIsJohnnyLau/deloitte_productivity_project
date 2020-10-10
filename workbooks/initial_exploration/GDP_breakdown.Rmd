@@ -1,0 +1,45 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+UK_gdp_breakdown <- read_csv("clean_data/UK_gdp_breakdown_annual.csv")
+
+getwd()
+setwd("/Users/Johnny/final_project/deloitte_productivity_project")
+potential_model_features_CVM <- UK_gdp_breakdown %>% 
+    group_by(GDP_measure) %>% 
+    summarise(count = n()) %>% 
+    arrange(desc(count)) %>% 
+    filter(count > 65) %>% 
+    select(GDP_measure) %>% 
+    filter(str_detect(GDP_measure, "CVM|chain")) %>% 
+    print()
+
+potential_model_features_CVM <- UK_gdp_breakdown %>% 
+    group_by(GDP_measure) %>% 
+    summarise(count = n()) %>% 
+    arrange(desc(count)) %>% 
+    filter(count > 65) %>% 
+    select(GDP_measure) %>% 
+    filter(str_detect(GDP_measure, "Gross |Product")) %>% 
+    print()
+
+UK_gdp_breakdown = 
+glmulti()
+
+```
+
+```{r}
+UK_gdp_breakdown %>% 
+    filter(GDP_measure == "Gross Domesic") %>% 
+    ggplot() +
+    aes(x = year, y = value) +
+    geom_line()
+
+
+
+```
+
